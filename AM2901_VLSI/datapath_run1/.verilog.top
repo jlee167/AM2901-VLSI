@@ -1,0 +1,28 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  q0_out, q3_out;
+
+reg  cin, cp, f0_in, f3_in, q0_in, q3_in, reg_wr;
+
+wire [3:0]  c;
+wire [3:0]  f;
+wire [3:0]  p;
+wire [3:0]  y;
+
+reg [5:0]  ALU_Dest;
+reg [15:0]  select_b_hi;
+reg [3:0]  ALU_Operand;
+reg [15:0]  select_a_hi;
+reg [4:0]  ALU_Function;
+reg [3:0]  d;
+
+
+
+datapath top(c, f, p, q0_out, q3_out, y, ALU_Dest, ALU_Function, 
+     ALU_Operand, cin, cp, d, f0_in, f3_in, q0_in, q3_in, reg_wr, 
+     select_a_hi, select_b_hi); 
+ 

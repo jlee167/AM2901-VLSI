@@ -1,0 +1,416 @@
+/* 
+   filepath:        <cds_install_dir>/samples/local/cdsinit
+   dfII version:    4.4
+  
+   This file should be copied as <cds_install_dir>/local/.cdsinit
+   and customized as a site startup file. The site startup file is
+   read and executed when the Design Framework II software starts.
+
+   This file can load all the application configuration files and
+   application bind key files. 
+
+   It also sets the library search path ( which may be overriden by the
+   user customization file.
+
+   Finally this file transfers control to the user by executing the
+   user customization file.
+
+   The user customization file may be
+
+     ./.cdsinit - .cdsinit in the working directory
+     ~/.cdsinit - .cdsinit in the user's home directory
+
+   This site file checks if a .cdsinit exists in the working directory
+   and executes it. If .cdsinit does not exist in the user's working
+   directory then ~/.cdsinit is executed if it exists.
+
+
+###################################################################
+   Please read the entire file and the comments before you start
+   customizing the file. See the section below on File Installation
+   for a list of sample files supplied.
+
+   There are bind key definition files supplied for different 
+   applications. The relevant bind key definitions files must
+   be loaded if you want bind keys defined for that application.
+   See section LOAD APPLICATION BIND KEY DEFINITIONS.
+###################################################################
+
+   In order for any window placements to work correctly the following 
+   X resource must be set in the .Xdefaults or .xresources file
+   pertaining to your hardware platform.
+
+	Mwm*clientAutoPlace:             False
+
+   After setting the resource read in the resource file with the command
+
+	xrdb <resource_filename>
+   
+   and restart the Motif window manager.
+
+   The function 
+
+             prependInstallPath("string")
+
+   adds the installation path to the string argument
+   For this reason there should NOT be a space at the beginning of the
+   string.
+   There SHOULD be a space at the end of the string if more paths are to
+   follow.
+   This function is used to make path specification in this file
+   independant of the exact installation path.
+
+   The function let() creates local variables ( example: libPath ). 
+   This makes sure that any global variables are not accidentally modified.
+
+*/
+/*
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;							
+;  File Installation			
+;  -----------------	
+;
+;  CONFIGURATION FILES
+;
+;  The following configuration files are delivered in the 4.4 release:
+;  <cds_install_dir>/samples/local
+;          aaConfig.il                  - analog
+;          dciConfig.il                 - Cadence to Synopsys Interface
+;          metConfig.il                 - Designing with Composer
+;                                         using metric measurements
+;          sysConfig.il                 - systems
+;          uiConfig.il                  - user interface
+;
+;  The configuration files are used to initialize parameters and
+;  forms.
+;
+;  ENVIRONMENT VARIABLES
+;  Schematic, Layout and Graphic environment variable defaults are now found in
+;  <cds_install_dir>/etc/tools/
+;				layout/.cdsenv
+;				schematic/.cdsenv
+;				graphic/.cdsenv
+;
+;  These can be customized in the user's ./cdsenv and ~/.cdsenv files.
+;  A .cdsenv file can be created by using CIW->options->save defaults.
+;
+;
+;  BIND KEY DEFINITION FILES
+;
+;  The following bind key definition files are delivered in the 
+;  4.3 release:
+;  <cds_install_dir>/samples/local
+;          leBindKeys.il                - layout editor
+;          schBindKeys.il               - schematic editor
+;
+;  CUSTOMIZATION FILES
+;
+;  The following customization files are delivered in the 
+;  4.3 release:
+;  <cds_install_dir>/samples/local/cdsinit          - site customization
+;  <cds_install_dir>/cdsuser/.cdsinit               - user customization
+;
+;									;
+;  ADMINISTRATION
+;
+;  The site administrator should install the "site" files as follows:	;
+;  
+;  1. Copy <cds_install_dir>/samples/local/cdsinit 
+;       to <cds_install_dir>/local/.cdsinit
+;     and modify the file
+;     (If <cds_install_dir>/local does not exist create it)
+;
+;     <cds_install_dir>/local is the site customization directory.
+;     This directory is not sent as part of the software. The site
+;     administrator must create this directory. Whenever software is
+;     upgraded the Cadence installation process retains the site
+;     administration directory if it exists.
+;
+;
+;  2. If default configuration needs to be changed copy the
+;     relevant configuration file
+;             from:  4.3/samples/local
+;             to:    4.3/local
+;     and modify the file(s)
+;
+;  3. If default bind key definitions need to be changed copy the
+;     relevant bind key definition file
+;             from:  4.3/samples/local
+;             to:    4.3/local
+;     and modify the file(s)
+;
+;  4. Copy 4.3/cdsuser/.cdsinit to the user's home or working
+;     directory - Do this step only if the user does not already
+;     have a .cdsinit file.
+;
+;     If after site customization each user wants to customize
+;     portions of the configuration or bind keys definitions 
+;     they should copy the relevant sections from the files in
+;     
+;                4.3/samples/local 
+;     into
+;
+;                the user's customization file
+;                ./.cdsinit   or    ~/.cdsinit
+;
+;
+;  FILE LOADING ORDER							
+;  ------------------							
+;  1. The configuration files are not automatically loaded.
+;     Remove the comment on the filename line to load the file.
+;     The search order for the configuration files is:
+;
+;           .
+;           ~
+;           4.3/local
+;     
+;  2. The bind key definition files are not automatically loaded. 
+;     Remove the comment on the filename line to load the file.
+;     The search order for the bind key definition files is:
+;
+;           .
+;           ~
+;           4.3/local
+;           4.3/samples/local
+;									
+;  3. Load user customization file
+;  
+;         ./.cdsinit - load .cdsinit in the working directory if it exists
+;     else
+;
+;         ~/.cdsinit - load .cdsinit in the user's home directory
+;     This file does NOT load both user customization files even if both exist.
+;
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+*/
+;
+;
+;################################################
+;#                                           
+;# LOAD APPLICATION CONFIGURATION FILES
+;#
+;################################################
+;
+;Remove the comment ; if you want to load the specific configuration file
+;If you do not load the configuration files the applications will use the
+;default configurations.
+;
+;
+let( (configFileList file path saveSkillPath)
+    configFileList = '(
+                 "aaConfig.il" 
+                 "dciConfig.il"
+                 "leConfig.il" 
+                 "metConfig.il"
+                 "schConfig.il" 
+                 "sysConfig.il" 
+                 "uiConfig.il" 
+                    )
+    
+;   This is the path that is searched for the files
+
+    path = strcat(
+
+;   If you want to add another path add it here as a string
+
+              ".  ~  "
+;              prependInstallPath("local ")
+              prependInstallPath("samples/local ")
+             )
+    saveSkillPath=getSkillPath()
+    setSkillPath(path)
+    foreach(file configFileList 
+       if(isFile(file) then
+          loadi(file)
+         )
+    )
+    setSkillPath(saveSkillPath)
+    printf(path)
+)
+;load("/opt/SHARE/cadence97Asol/tools/dfII/samples/local/schFixMenu.il")
+;
+;################################################
+;#                                           
+;# LOAD APPLICATION BIND KEY DEFINITIONS
+;#
+;################################################
+;
+;Add the comment ; if you do not want to load the specific
+;bind key definition file.
+;
+;If you do not load the bind key definitions the applications will not
+;have any bind keys defined.
+;
+;If you load the bind key definition file but the application is not
+;registered ( product not licensed or checked out ) then you might get
+;a warning that looks like
+;
+; *WARNING* "Schematics is not registered yet"
+;
+;This warning can be ignored if you know that the product is not
+;licensed or checked out.
+;
+let( (bindKeyFileList file path saveSkillPath)
+    bindKeyFileList = '(
+                   "leBindKeys.il" 
+                   "schBindKeys.il"
+                    )
+    
+;   This is the path that is searched for the files
+    path = strcat(
+;
+;   If you want to add another path add it here as a string
+;
+              ".  ~  "
+;              prependInstallPath("local ")
+              prependInstallPath("samples/local ")
+             )
+    saveSkillPath=getSkillPath()
+    setSkillPath(path)
+    foreach(file bindKeyFileList
+       if(isFile(file) then
+          loadi(file)
+         )
+    )
+    setSkillPath(saveSkillPath)
+)
+
+;  An individual user may wish to add some bindkeys of his/her own or
+;  over ride some default loaded bindkeys.  For more information about
+;  bindkeys see the manual "SKILL Reference Manual, Language Fundamentals", 
+;  Chapter 4.
+;
+;  Here is an example of setting one bindkey on "F2" than prints 
+;  "Hello world" to the CIW when pressed in the CIW.
+;hiSetBindKey("Command Interpreter" "<Key>F2" "printf(\"Hello World\")") 
+;
+;  Here is an example of setting keys for more than one application
+;let( (app appList)
+; appList = '( 
+;	"Command Interpreter"
+;    "Schematics"
+;    "Symbol"
+;   
+;    Add other applications here 
+;
+;    )
+;
+;
+;  foreach(app appList
+;    hiSetBindKey(app "<Key>F4" "printf(\"Hello \")") 
+;    hiSetBindKey(app "<Key>F5" "printf(\"World\")") 
+;  )
+;)
+;
+;
+;
+;################################################
+;#
+;# STARTING FRAMEVIEWER AUTOMATICALLY and SETTING UP HELP
+;#
+;################################################
+;
+;  The following call starts up Frameviewer when you start the CADENCE
+;  software. Frameviewer is used to view on-line documentation.
+;
+;  The path of the Frameviewer executable is assumed to be
+;
+;  <cds_install_dir>/tools/infotools/helpViewer/bin/viewer
+;
+; The function fmKickFM() returns 1 if any other Frame product is
+; currently running in the foreground or background.
+; 
+; The variable OpusStartedFrame is set to "t" to indicate that the current
+; help viewer should be killed on exit.  If you wish to ensure that the
+; help viewer remains running after exit, change the line to:
+;
+;	OpusStartedFrame = nil
+;
+; Frameviewer startup command
+;
+    when( fmKickFM() != 1
+        OpusStartedFrame = t
+        sh( strcat( cdsGetInstPath() "/tools/infotools/bin/invokeviewer"
+		    if( hiGraphicMode() " " " -rpcProp none " ) "-m"
+            )
+        )
+    )
+;
+;
+
+;################################################
+;#
+;# MISCELLANEOUS
+;#
+;################################################
+;
+printf("\nEND OF SITE CUSTOMIZATION\n")
+;
+;END OF THE SITE CUSTOMIZATION FILE
+;
+;
+;
+;  Now that your library path has been set, you may want to open
+;  some of those libraries during initialization. You may also want
+;  to open the library browser.
+;
+;dmOpenLib("your_lib_name1")
+;dmOpenLib("your_lib_name2")
+;
+;  Remove comment to open the library browser automatically at start-up
+;dmbOpenLibBrowser()
+;
+;################################################
+;#
+;# SETTINGS FOR SKILL PATH and SKILL PROGRAMMING
+;#
+;################################################
+;
+;  The function sstatus() sets the status of variables
+;  The variable writeProtect controls if a SKILL function can be
+;  redefined or not;
+;
+;  Any functions defined after writeProtect = t CANNOT be redefined
+;  Any functions defined after writeProtect = nil CAN be redefined
+;  If you are going to create SKILL programs and define functions set the
+;  status of writeProtect to nil at the beginning of your session.
+;
+;  Set skill search path. The SKILL search path contains directories
+;  to be searched to locate SKILL programs when program names are
+;  specified without full path names.
+;  The operation could be reading, writing or loading a SKILL program.
+;
+;  Source technology files are considered SKILL files and when loading 
+;  or dumping the technology file SKILL search path will be used.
+;
+;
+
+sstatus(writeProtect nil)
+
+let((skillPath)
+   skillPath= strcat(
+    ". ~ "                                          ; Current & home directory
+    prependInstallPath("samples/techfile ")         ; sample source technology files
+   )
+   setSkillPath(skillPath)
+)
+;
+;
+;
+;   Customize verilog netlisting 
+ cdsViewListVerilog = '("functional" "behavioral" "system" "verilog" "opt_net" "opt_sch" "schematic" "symbol")
+;
+;   Which cells stop the verilog netlister
+ csiStopListVerilog = '("system" "verilog" "dc" "symbol")
+;
+;
+editor = "textedit"
+;
+;
+setPrompts("Cadence 4.4.X for ECE325/Fall2000  " "")
+;
+printf(".cdsinit file read successfully \n")
+;
+;END OF USER CUSTOMIZATION
+

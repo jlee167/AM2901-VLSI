@@ -1,0 +1,25 @@
+// Library - ece425mp2, Cell - regbit, View - schematic
+// LAST TIME SAVED: Nov 11 21:32:44 2016
+// NETLIST TIME: Nov 11 21:33:17 2016
+`timescale 1ns / 1ns 
+
+module regbit ( data_a, data_b, select_a_hi, select_b_hi );
+
+inout  data_a, data_b;
+
+input  select_a_hi, select_b_hi;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "regbit";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+tx_gate I1 ( data_a, net08, select_a_hi, net07);
+tx_gate I2 ( data_b, net08, select_b_hi, net03);
+bitcell I0 ( net08, net4);
+inv I10 ( net03, select_b_hi);
+inv I9 ( net07, select_a_hi);
+
+endmodule

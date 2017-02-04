@@ -1,0 +1,7 @@
+tx_gate I1 ( data_a, net08, select_a_hi, net07);
+tx_gate I2 ( data_b, net08, select_b_hi, net03);
+bitcell I0 ( net08, net4);
+inv I10 ( net03, select_b_hi);
+inv I9 ( net07, select_a_hi);
+
+endmodule

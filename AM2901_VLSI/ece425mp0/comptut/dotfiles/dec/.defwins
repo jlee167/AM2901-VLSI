@@ -1,0 +1,6 @@
+#!/bin/csh -f
+
+xmodmap /.modmap
+xterm -g 80x43+0+119 -fg wheat -bg darkslategrey -sb -cr yellow&
+xterm -fn rk24 -iconic -n "firmware"&
+

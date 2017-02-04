@@ -1,0 +1,235 @@
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.02s.
+Loading /home/jlee167/ece425.work/.simrc file.
+*WARNING* (icLic-203) Failed to check out license Virtuoso_Layout_Suite_L ("Layout L") to run Layout L because of status code -18.
+Attempting to check out the next available license Virtuoso_Layout_Suite_XL ("Layout XL") per license checkout order L, XL, GXL.
+*WARNING* (icLic-203) Failed to check out license Virtuoso_Layout_Suite_XL ("Layout XL") to run Layout L because of status code -18.
+Attempting to check out the next available license Virtuoso_Layout_Suite_GXL ("Layout GXL") per license checkout order L, XL, GXL.
+*INFO* (icLic-302) License Virtuoso_Layout_Suite_GXL ("Layout GXL") was used to run Layout L.
+
+Running simulation in directory: "/home/jlee167/ece425.work/LVS".
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeOnRunStart _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetFingerNames _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetMfactorNames _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeCreateMappedParams _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeMapDeviceParams _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeRebindDeviceParams _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeUpdateDesignVariables _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeRebindDUTs _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeOnPostCreateHistory _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeOnPreCreateHistory _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeOnPreRun _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeOnExit _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeRestoreVarsParams _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeDisableRedundantVarParams _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeOnEntry _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeAllowSwitch _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeSetup _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeSetParView _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeSetSchView _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetParView _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetSchView _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeBuildParViewHelp _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeBuildParView _mspsModeExt
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeLayUseEst _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeLayUseSpef _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeBuildEst _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeBuildParView _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetFingerNames _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetMfactorNames _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetLdeTool _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetLdeSource _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetLayoutSource _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetRefNet _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetCorner _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetExtrSetup _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetLayoutView _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetLayoutCell _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetLayoutLib _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetIgnoreDummy _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetExpandSchDevices _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetIncludeDevParasitics _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetIncludeLdeParameters _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetIncludeLayParasitics _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetIncludeSchEstimates _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeSetup _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeSetParView _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeSetSchView _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetParView _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetSchView _mspsModeLay
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeBuildEst _mspsModeSchEst
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeBuildParView _mspsModeSchEst
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetFingerNames _mspsModeSchEst
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetMfactorNames _mspsModeSchEst
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetLdeTool _mspsModeSchEst
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetLdeSource _mspsModeSchEst
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetLayoutSource _mspsModeSchEst
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetIncludeSchEstimates _mspsModeSchEst
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeAllowSwitch _mspsModeSchEst
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeSetup _mspsModeSchEst
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeSetParView _mspsModeSchEst
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeSetSchView _mspsModeSchEst
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetParView _mspsModeSchEst
+
+*WARNING* (loadContext): could not restore method, undefined generic _parModeGetSchView _mspsModeSchEst
+
+*WARNING* (loadContext): could not restore method, undefined generic _parEstBuildGetNoParasiticsWarnClass _mspsLayBuild
+
+*WARNING* (loadContext): could not restore method, undefined generic _parEstBuildGetMissingRefNetErrClass _mspsLayBuild
+
+*WARNING* (loadContext): could not restore method, undefined generic _parEstBuildViewName _mspsEstBuild
+
+*WARNING* (loadContext): could not restore method, undefined generic _parEstBuildCellName _mspsEstBuild
+
+*WARNING* (loadContext): could not restore method, undefined generic _parEstBuildLibName _mspsEstBuild
+
+*WARNING* (loadContext): could not restore method, undefined generic _parMsgReport _mspsMsgReporter
+
+
+
+Begin netlist:    Dec 12 22:05:50 2016
+	view name list	= ("auLvs" "extracted")
+	stop name list	= ("auLvs")
+	library name	= "ece425mp2"
+	cell name	= "datapath"
+	view name	= "extracted"
+	globals lib	= "basic"
+Running Artist Flat Netlisting ...
+*WARNING* Parameter 'lxUseCell' already exists.
+End netlist:    Dec 12 22:05:52 2016
+
+Moving original netlist to extNetlist
+Removing parasitic components from netlist
+	presistors removed:  0
+	pcapacitors removed: 0
+	pinductors removed:  0
+	pdiodes removed:     0
+	trans lines removed: 0
+	988 nodes merged into 988 nodes
+
+
+Begin netlist:    Dec 12 22:05:52 2016
+	view name list	= ("auLvs" "cmos_sch" "schematic" "symbol")
+	stop name list	= ("auLvs")
+	library name	= "ece425mp2"
+	cell name	= "datapath"
+	view name	= "schematic"
+	globals lib	= "basic"
+Running Artist Flat Netlisting ...
+*WARNING* (icLic-203) Failed to check out license Virtuoso_Layout_Suite_L ("Layout L") to run Layout L because of status code -18.
+Attempting to check out the next available license Virtuoso_Layout_Suite_XL ("Layout XL") per license checkout order L, XL, GXL.
+*WARNING* (icLic-203) Failed to check out license Virtuoso_Layout_Suite_XL ("Layout XL") to run Layout L because of status code -18.
+Attempting to check out the next available license Virtuoso_Layout_Suite_GXL ("Layout GXL") per license checkout order L, XL, GXL.
+*INFO* (icLic-302) License Virtuoso_Layout_Suite_GXL ("Layout GXL") was used to run Layout L.
+*WARNING* Parameter 'lxUseCell' already exists.
+*WARNING* Parameter 'lxUseCell' already exists.
+End netlist:    Dec 12 22:05:56 2016
+
+Moving original netlist to extNetlist
+Removing parasitic components from netlist
+	presistors removed:  0
+	pcapacitors removed: 0
+	pinductors removed:  0
+	pdiodes removed:     0
+	trans lines removed: 0
+	4242 nodes merged into 4242 nodes
+
+Running netlist comparison program:  LVS
+Begin comparison:    Dec 12 22:05:56 2016
+@(#)$CDS: LVS version 6.1.7-64b 07/05/2016 20:10 (sjfhw313) $
+
+45 net-list ambiguities were resolved by random selection.
+
+The net-lists failed to match.
+
+                             layout  schematic
+                                instances
+        un-matched              33      33     
+        rewired                 196     0      
+        size errors             0       0      
+        pruned                  0       0      
+        active                  2144    2144   
+        total                   2144    2144   
+
+                                  nets
+        un-matched              86      86     
+        merged                  0       0      
+        pruned                  0       0      
+        active                  988     988    
+        total                   988     988    
+
+                                terminals
+        un-matched              12      12     
+        matched but
+        different type          0       0      
+        total                   76      78     
+End comparison:      Dec 12 22:05:57 2016
+*WARNING* (icLic-203) Failed to check out license Virtuoso_Layout_Suite_L ("Layout L") to run Layout L because of status code -18.
+Attempting to check out the next available license Virtuoso_Layout_Suite_XL ("Layout XL") per license checkout order L, XL, GXL.
+*WARNING* (icLic-203) Failed to check out license Virtuoso_Layout_Suite_XL ("Layout XL") to run Layout L because of status code -18.
+Attempting to check out the next available license Virtuoso_Layout_Suite_GXL ("Layout GXL") per license checkout order L, XL, GXL.
+*INFO* (icLic-302) License Virtuoso_Layout_Suite_GXL ("Layout GXL") was used to run Layout L.
+
+
+Comparison program completed successfully.

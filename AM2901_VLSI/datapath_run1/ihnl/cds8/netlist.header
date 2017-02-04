@@ -1,0 +1,22 @@
+// Library - ece425mp2, Cell - regfile, View - schematic
+// LAST TIME SAVED: Nov 26 23:35:47 2016
+// NETLIST TIME: Nov 26 23:40:09 2016
+`timescale 1ns / 1ns 
+
+module regfile ( data_a, data_b, cp, data_write, select_a_hi,
+     select_b_hi, write_en );
+
+output  data_a, data_b;
+
+input  cp, data_write, write_en;
+
+input [15:0]  select_a_hi;
+input [15:0]  select_b_hi;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "regfile";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

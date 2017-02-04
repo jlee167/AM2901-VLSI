@@ -1,0 +1,10 @@
+1475113027 /home/jlee167/cds.lib
+1478921597 /home/jlee167/ece425.work/unit/testfixture.template
+1139589195 /software/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/inv/functional/verilog.v
+1400099701 /home/jlee167/ece425.work/ece425mp2/bitcell/functional/verilog.v
+1400099700 /home/jlee167/ece425.work/ece425mp2/tx_gate/functional/verilog.v
+1478921597 /home/jlee167/ece425.work/unit/hdlFilesDir/cds_alias.v
+1478921597 /home/jlee167/ece425.work/unit/ihnl/cds0/netlist
+1139589197 /software/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/nand2/functional/verilog.v
+1478921596 /home/jlee167/ece425.work/unit/ihnl/cds1/netlist
+1478921597 /home/jlee167/ece425.work/unit/ihnl/cds2/netlist

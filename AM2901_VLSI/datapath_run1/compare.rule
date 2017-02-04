@@ -1,0 +1,20 @@
+#
+# This file, "compare.rule", contains commands to run simcompare
+#
+
+
+# You are comparing the following databases
+#
+golden /class/ece425/mp2/datapath_gold/datapath_gold.trn
+test /home/jlee167/ece425.work/datapath_run1/shm.db/shm.db.trn
+
+# The clock comparison uses following configurations :
+#
+
+clkdef clk1 test.cp
+clkcompare clk1 . -setup 0 -hold 0 -posedge -sample 0
+# You have chosen the following reporting options :
+#
+
+report -all  -detail summary  -output /home/jlee167/ece425.work/datapath_run1/compare.out
+save /home/jlee167/ece425.work/datapath_run1/diff.db.out

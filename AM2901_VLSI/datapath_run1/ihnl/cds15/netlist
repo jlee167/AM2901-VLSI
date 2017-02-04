@@ -1,0 +1,44 @@
+// Library - ece425mp2, Cell - bitslice, View - schematic
+// LAST TIME SAVED: Nov 26 23:45:53 2016
+// NETLIST TIME: Nov 26 23:46:09 2016
+`timescale 1ns / 1ns 
+
+module bitslice ( cout, f, p, q, y, ALU_Dest, ALU_Function,
+     ALU_Operand, cin, cp, d, f_left, f_right, q_left, q_right, reg_wr,
+     select_a_hi, select_b_hi );
+
+output  cout, f, p, q, y;
+
+input  cin, cp, d, f_left, f_right, q_left, q_right, reg_wr;
+
+input [15:0]  select_b_hi;
+input [15:0]  select_a_hi;
+input [4:0]  ALU_Function;
+input [3:0]  ALU_Operand;
+input [5:0]  ALU_Dest;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "bitslice";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+alu I1 ( cout, net014, p, ALU_Function[1:0], cin, ALU_Function[3],
+     ALU_Function[4], net048, net049);
+regfile I0 ( net16, net038, cp, net13, select_a_hi[15:0],
+     select_b_hi[15:0], reg_wr);
+Q_Register I2 ( q, net056, cp, ALU_Dest[2]);
+mux_2to1 I12 ( y, f, net16, ALU_Dest[5]);
+mux_2to1 I3 ( f, net014, net040, ALU_Function[2]);
+inv I4 ( net040, net014);
+mux_4to1 I13 ( net048, net16, cds_globals.gnd_, d, cds_globals.gnd_,
+     ALU_Operand[3], ALU_Operand[2]);
+mux_4to1 I10 ( net13, f, f_left, f_right, cds_globals.gnd_,
+     ALU_Dest[4], ALU_Dest[3]);
+mux_4to1 I8 ( net056, f, q_left, q_right, cds_globals.gnd_,
+     ALU_Dest[1], ALU_Dest[0]);
+mux_4to1 I6 ( net049, net038, net16, q, cds_globals.gnd_,
+     ALU_Operand[1], ALU_Operand[0]);
+
+endmodule

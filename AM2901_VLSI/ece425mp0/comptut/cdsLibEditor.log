@@ -1,0 +1,78 @@
+\o Program:		@(#)$CDS: cdsLibEditor version 6.1.7 - CAT35 05/21/2016 02:35 (sjfnl027) $
+\o Sub version:		sub-version  IC6.1.7 - CAT35.15s020 
+\o Arguments:		-cdslib /home/jlee167/ece425.work/ece425mp0/comptut/cds.lib -mpssession virtuoso22075 -mpshost eceb-2022-25.ews.illinois.edu 
+\o Working Directory:	eceb-2022-25.ews.illinois.edu:/home/jlee167/ece425.work/ece425mp0/comptut
+\o 64-bit offsets
+\a nrSetWindowVisibility(cdsLibEditor "show")
+\o Qt version: 		4.8.5
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 0 0)
+\o Active cell: 0 0 ""
+\a nrResizeWindow(cdsLibEditor list(41 70 500 400))
+\a nrResizeWindow(cdsLibEditor list(1219 243 500 400))
+\a nrResizeWindow(cdsLibEditor list(1441 155 500 400))
+\a nrResizeWindow(cdsLibEditor list(1302 118 500 400))
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemRename(cdsLibEditor->mainTable, 0 0 "basic")
+\a nrListItemAction(cdsLibEditor->mainTable 0 1)
+\o Active cell: 0 1 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 0 1 "/software/cadence-Aug2016/IC617/tools/dfII/etc/cdslib/basic")
+\a nrListItemAction(cdsLibEditor->mainTable 1 0)
+\o Active cell: 1 0 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 1 0 "US_8ths")
+\a nrListItemAction(cdsLibEditor->mainTable 1 1)
+\o Active cell: 1 1 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 1 1 "/software/cadence-Aug2016/IC617/tools/dfII/etc/cdslib/US_8ths")
+\o QUESTION (CLE-200): The directory "/software/cadence-Aug2016/IC617/tools/dfII/etc/cdslib/US_8ths" \ndoesn't exist. If other tools use this file, \nan error will occur unless you either create \nthe directory you have specified or change the \npath to an existing directory. \n\nDo you want to create a new library? 
+\a nrSetWindowVisibility(needCreateDialog "show")
+\a nrSetCurrentWindow(needCreateDialog)
+\a nrResizeWindow(needCreateDialog list(1321 237 462 193))
+\a needCreateDialog->cancelButton->value = t
+\a nrListItemAction(cdsLibEditor->mainTable 2 0)
+\o Active cell: 2 0 ""
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 1 1)
+\o Active cell: 1 1 "/software/cadence-Aug2016/IC617/tools/dfII/etc/cdslib/US_8ths"
+\a nrListItemRename(cdsLibEditor->mainTable, 1 1 "/software/cadence-Aug2016/IC617/tools/dfII/etc/cdslib/sheets/US_8ths")
+\a nrListItemAction(cdsLibEditor->mainTable 2 0)
+\o Active cell: 2 0 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 2 0 "analogLib")
+\a nrListItemAction(cdsLibEditor->mainTable 2 1)
+\o Active cell: 2 1 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 2 1 "/software/cadence-Aug2016/IC617/tools/dfII/etc/cdslib/artist/analogLib")
+\a nrListItemAction(cdsLibEditor->mainTable 3 0)
+\o Active cell: 3 0 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 3 0 "sample")
+\a nrListItemAction(cdsLibEditor->mainTable 3 1)
+\o Active cell: 3 1 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 3 1 "/software/cadence-Aug2016/IC617/tools/dfII/samples/cdslib/sample")
+\a nrListItemAction(cdsLibEditor->mainTable 4 0)
+\o Active cell: 4 0 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 4 0 "TTL_tutor")
+\a nrListItemAction(cdsLibEditor->mainTable 4 1)
+\o Active cell: 4 1 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 4 1 "TTL_tutor")
+\a nrListItemAction(cdsLibEditor->mainTable 5 0)
+\o Active cell: 5 0 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 5 0 "master")
+\a nrListItemAction(cdsLibEditor->mainTable 5 1)
+\o Active cell: 5 1 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 5 1 "master")
+\a nrListItemAction(cdsLibEditor->mainTable 6 0)
+\o Active cell: 6 0 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 6 0 "tutorial")
+\a nrListItemAction(cdsLibEditor->mainTable 6 1)
+\o Active cell: 6 1 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 6 1 "tutorial")
+\a nrListItemAction(cdsLibEditor->mainTable 7 0)
+\o Active cell: 7 0 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 7 0 "user_ASIC")
+\a nrListItemAction(cdsLibEditor->mainTable 7 1)
+\o Active cell: 7 1 ""
+\a nrListItemRename(cdsLibEditor->mainTable, 7 1 "user_ASIC")
+\a nrListItemAction(cdsLibEditor->mainTable 8 0)
+\o Active cell: 8 0 ""
+\a cdsLibEditor->fileSaveButton->value = t
+\a cdsLibEditor->fileExitButton->value = t
+\a nrSetWindowVisibility(cdsLibEditor "hide")
+\a exit(0)

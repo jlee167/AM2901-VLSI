@@ -1,0 +1,29 @@
+simFuncDPLList = '(
+    (nil libName "ece425mp2" cellName "bitcell"
+    viewName "functional" filePath "/home/jlee167/ece425.work/ece425mp2/bitcell/functional/verilog.v"
+    ) 
+    (nil libName "NCSU_Digital_Parts" cellName "nand4"
+    viewName "functional" filePath "/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/nand4/functional/verilog.v"
+    ) 
+    (nil libName "NCSU_Digital_Parts" cellName "nand3"
+    viewName "functional" filePath "/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/nand3/functional/verilog.v"
+    ) 
+    (nil libName "NCSU_Digital_Parts" cellName "nor2"
+    viewName "functional" filePath "/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/nor2/functional/verilog.v"
+    ) 
+    (nil libName "NCSU_Digital_Parts" cellName "nand2"
+    viewName "functional" filePath "/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/nand2/functional/verilog.v"
+    )
+    (nil libName "NCSU_Digital_Parts" cellName "inv"
+    viewName "functional" filePath "/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/inv/functional/verilog.v"
+    ) 
+    (nil libName "NCSU_Analog_Parts" cellName "nmos"
+    viewName "functional" filePath "/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Analog_Parts/nmos/functional/verilog.v"
+    ) 
+    (nil libName "NCSU_Analog_Parts" cellName "pmos"
+    viewName "functional" filePath "/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Analog_Parts/pmos/functional/verilog.v"
+    ) 
+    (nil libName "ece425mp2" cellName "tx_gate"
+    viewName "functional" filePath "/home/jlee167/ece425.work/ece425mp2/tx_gate/functional/verilog.v"
+    )
+)

@@ -1,0 +1,13 @@
+cellViewCounterTable = makeTable('cellViewCounterTableType nil)
+cellViewCounterTable['("ece425mp2" "regfile" "schematic" )] =  15549
+cellViewCounterTable['("ece425mp2" "tx_gate" "symbol" )] =  53
+cellViewCounterTable['("NCSU_Digital_Parts" "inv" "symbol" )] =  34
+cellViewCounterTable['("ece425mp2" "regbit" "schematic" )] =  1772
+cellViewCounterTable['("ece425mp2" "latch" "schematic" )] =  771
+cellViewCounterTable['("basic" "iopin" "symbolr" )] =  19
+cellViewCounterTable['("ece425mp2" "bitcell" "symbol" )] =  48
+cellViewCounterTable['("basic" "ipin" "symbol" )] =  19
+cellViewCounterTable['("ece425mp2" "regbit" "symbol" )] =  63
+cellViewCounterTable['("ece425mp2" "latch" "symbol" )] =  48
+cellViewCounterTable['("basic" "noConn" "symbol" )] =  20
+cellViewCounterTable['("basic" "opin" "symbol" )] =  19

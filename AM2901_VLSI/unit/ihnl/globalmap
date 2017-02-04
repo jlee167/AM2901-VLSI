@@ -1,0 +1,10 @@
+CADENCE IHNL11140
+$model
+ece425mp2/regbit/schematic regbit
+ece425mp2/regfile/schematic regfile
+ece425mp2/latch/schematic latch
+$endmodel
+$net
+$endnet
+$param
+$endparam

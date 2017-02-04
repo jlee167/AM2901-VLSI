@@ -1,0 +1,8 @@
+DEFINE basic ${CDS_INST_DIR}/tools/dfII/etc/cdslib/basic 
+DEFINE sample ${CDS_INST_DIR}/tools/dfII/samples/cdslib/sample 
+DEFINE cdsDefTechLib ${CDS_INST_DIR}/tools/dfII/etc/cdsDefTechLib
+DEFINE cellTechLib ./cellTechLib
+DEFINE pCells ./pCells
+DEFINE master ./master
+DEFINE ROD ./ROD
+DEFINE tutorial ./tutorial

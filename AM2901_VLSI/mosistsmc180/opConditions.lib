@@ -1,0 +1,124 @@
+**************** Enviromental and Process Parameters *********************
+
+**** Nominal Voltage, Room Temperature, Typical Process
+.lib TT
+.temp 70
+.param Supply='Sup'
+.prot
+.include 'mosistsmc180.sp'
+.unprot
+.endl TT
+
+*       SS    nl, pl, RCslo     Hi temp, lo supply voltage
+.lib SS
+.temp 125
+.param Supply='0.9 * Sup'
+.prot
+.include 'mosistsmc180.sp'
+.unprot
+.endl SS
+
+*       FF    nh, ph, RCfas     Lo temp, hi supply voltage
+.lib FF
+.temp 0
+.param Supply='1.1 * Sup'
+.prot
+.include 'mosistsmc180.sp'
+.unprot
+.endl FF
+
+*       FS    nh, pl, RCnom     Hi temp, lo supply voltage
+.lib FS
+.temp 125
+.param Supply='0.9 * Sup'
+.prot
+.include 'mosistsmc180.sp'
+.unprot
+.endl FS
+
+*       SF    nl, ph, RCnom     Lo temp, hi supply voltage
+.lib SF
+.temp 0
+.param Supply='1.1 * Sup'
+.prot
+.include 'mosistsmc180.sp'
+.unprot
+.endl SF
+
+*       FS    nh, pl, RCnom     Hi temp, lo supply voltage
+.lib FSM
+.temp 50
+.param Supply='Sup'
+.prot
+.include 'mosistsmc180.sp'
+.unprot
+.endl FS
+
+*       SF    nl, ph, RCnom     Lo temp, hi supply voltage
+.lib SFM
+.temp 50
+.param Supply='Sup'
+.prot
+.include 'mosistsmc180.sp'
+.unprot
+.endl SF
+
+*       SLOW  nt, pt, RCnom     Hi temp, lo supply voltage
+.lib SLOW
+.temp 125
+.param Supply='0.9 * Sup'
+.prot
+.include 'mosistsmc180.sp'
+.unprot
+.endl SLOW
+
+*       FAST  nt, pt, RCnom     Lo temp, hi supply voltage
+.lib FAST
+.temp 0
+.param Supply='1.1*Sup'
+.prot
+.include 'mosistsmc180.sp'
+.unprot
+.endl FAST
+
+
+*       nt, pt, RCnom     med temp, nom supply voltage
+.lib TM
+.temp 70
+.param Supply='Sup'
+.prot
+.include 'mosistsmc180.sp'
+.unprot
+.endl TM
+
+*       nf, pf, RCfast     med temp, nom supply voltage
+.lib FM
+.temp 70
+.param Supply='Sup'
+.prot
+.include 'mosistsmc180.sp'
+.unprot
+.endl FM
+
+*       ns, ps, RCslow     med temp, nom supply voltage
+.lib SM
+.temp 70
+.param Supply='Sup'
+.prot
+.include 'mosistsmc180.sp'
+.unprot
+.endl SM
+*
+.lib ST
+.temp 25
+.param Supply='Sup'
+.prot
+.include 'mosistsmc180.sp'
+.unprot
+.endl ST
+*
+.lib flatten
+.param Supply=0
+.model nmos NMOS LEVEL=1 LD=0 XW=0
+.model pmos PMOS LEVEL=1 LD=0 XW=0
+.endl flatten

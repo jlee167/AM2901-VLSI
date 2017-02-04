@@ -1,0 +1,26 @@
+// Library - ece425mp2, Cell - bitslice_mp2, View - schematic
+// LAST TIME SAVED: Nov 26 23:35:52 2016
+// NETLIST TIME: Nov 26 23:40:09 2016
+`timescale 1ns / 1ns 
+
+module bitslice_mp2 ( cout, f, p, q, y, ALU_Dest, ALU_Function,
+     ALU_Operand, cin, cp, d, f_left, f_right, q_left, q_right, reg_wr,
+     select_a_hi, select_b_hi );
+
+output  cout, f, p, q, y;
+
+input  cin, cp, d, f_left, f_right, q_left, q_right, reg_wr;
+
+input [15:0]  select_b_hi;
+input [15:0]  select_a_hi;
+input [4:0]  ALU_Function;
+input [3:0]  ALU_Operand;
+input [5:0]  ALU_Dest;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "bitslice_mp2";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

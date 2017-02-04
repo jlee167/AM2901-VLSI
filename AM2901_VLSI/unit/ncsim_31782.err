@@ -1,0 +1,54 @@
+csi-ncsim - CSI: Command line:
+ncsim
+    -f /home/jlee167/ece425.work/unit/INCA_libs/irun.lnx86.15.20.nc/linux-a1.ews.illinois.edu_31782/ncsim.args
+        +delay_mode_path
+        +typdelays
+        +nostdout
+        +nocopyright
+        +ncvlogargs+ -neverwarn -nostdout -nocopyright 
+        +ncelabargs+ -neg_tchk  -nonotifier  -sdf_NOCheck_celltype  -access +r  -pulse_e 100  -pulse_r 100  -neverwarn  -timescale 1ns/1ns -nostdout -nocopyright
+        +ncsimargs+ -neverwarn  -nocopyright -gui -input /home/jlee167/ece425.work/unit/.simTmpNCCmd 
+        +mpssession+virtuoso27668
+        +mpshost+linux-a1.ews.illinois.edu
+        -NOSTDOUT
+        -NOCOPYRIGHT
+        -neverwarn
+        -nocopyright
+        -gui
+        -input /home/jlee167/ece425.work/unit/.simTmpNCCmd
+        -MPSSESSION virtuoso27668
+        -MPSHOST linux-a1.ews.illinois.edu
+        -MESSAGES
+        +EMGRLOG simout.tmp
+        -XLSTIME 1478887100
+        -XLKEEP
+        -XLMODE ./INCA_libs/irun.lnx86.15.20.nc
+        -RUNMODE
+        -CDSLIB ./INCA_libs/irun.lnx86.15.20.nc/cds.lib
+        -HDLVAR ./INCA_libs/irun.lnx86.15.20.nc/hdl.var
+        -XLNAME ncxlmode
+        -XLVERSION TOOL:	ncxlmode	15.20-s008
+        -XLNAME ./INCA_libs/irun.lnx86.15.20.nc/linux-a1.ews.illinois.edu_31782
+    -CHECK_VERSION TOOL:	ncxlmode	15.20-s008
+    -LOG_FD 5
+    -LOG_FD_NAME simout.tmp
+    -cmdnopsim
+    -runlock /home/jlee167/ece425.work/unit/INCA_libs/irun.lnx86.15.20.nc/.nclib.lock
+    -runscratch /home/jlee167/ece425.work/unit/INCA_libs/irun.lnx86.15.20.nc/linux-a1.ews.illinois.edu_31782
+
+csi-ncsim - CSI: *F,INTERR: INTERNAL EXCEPTION
+Observed simulation time : 0 FS + 0
+-----------------------------------------------------------------
+The tool has encountered an unexpected condition and must exit.
+Contact Cadence Design Systems customer support about this
+problem and provide enough information to help us reproduce it,
+including the logfile that contains this error message.
+  TOOL:	ncsim	15.20-s008
+  HOSTNAME: linux-a1.ews.illinois.edu
+  OPERATING SYSTEM: Linux 3.10.0-327.36.1.el7.x86_64 #1 SMP Sun Sep 18 13:04:29 UTC 2016 x86_64
+  MESSAGE: Unexpected signal #24 (Cpu Limit Exceeded), program terminated
+-----------------------------------------------------------------
+
+csi-ncsim - CSI: Cadence Support Investigation, recording details
+Error: Error processing callstack!
+csi-ncsim - CSI: investigation complete took 0.000 secs, send this file to Cadence Support

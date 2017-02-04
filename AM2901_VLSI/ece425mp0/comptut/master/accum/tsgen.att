@@ -1,0 +1,18 @@
+defcell("accum"
+    input("A<0:7>" "B<0:7>" "CLK")
+    output("Y<0:7>")
+    defsymbol(
+        symbolProps(partName = "accum"
+                    )
+        symbolParam(
+                     wireSpacing = 0.125000
+                     wireLength = 0.250000
+                     labelHeight = 0.062500
+                     vSideLength = 1.000000
+                     hSideLength = 1.750000
+                    )
+        controlParam(queryMode = nil
+                     packageLabels = nil
+        )
+    )
+)

@@ -1,0 +1,6 @@
+nand2 I11 ( net10, In1, s);
+nand2 I10 ( net9, In0, net8);
+nand2 I9 ( Out, net9, net10);
+inv I8 ( net8, s);
+
+endmodule

@@ -1,0 +1,29 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "regfile"
+  repList "behavioral functional schematic symbol"
+  stopList "behavioral functional symbol"
+  hierDelim "."
+  hierPrefix "test.top"
+  globalHierPrefix "cds_globals."
+  netlistDir "/home/jlee167/ece425.work/unit"
+  busRef   "ORDERED"
+  netType   "BUS"
+  leftStr  "["
+  rangeStr  ":"
+  rightStr  "]"
+ )
+( defbus
+( "select_a_hi" 15 0  "select_a_hi" 15 0  )
+( "select_b_hi" 15 0  "select_b_hi" 15 0  )
+ )
+( model
+( "ece425mp2/regbit/schematic" "regbit" )
+( "ece425mp2/latch/schematic" "latch" )
+( "ece425mp2/regfile/schematic" "regfile" )
+ )
+( "regbit" "ihnl/cds0/map" )
+( "latch" "ihnl/cds1/map" )
+( "regfile" "ihnl/cds2/map" )
+ )

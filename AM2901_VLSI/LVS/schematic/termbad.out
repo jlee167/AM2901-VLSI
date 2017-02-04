@@ -1,0 +1,24 @@
+T -1  ALU_Dest<0> /ALU_Dest<0>
+? Terminal ALU_Dest<0> in the schematic failed to match any terminal in the layout.
+T -1  ALU_Dest<3> /ALU_Dest<3>
+? Terminal ALU_Dest<3> in the schematic failed to match any terminal in the layout.
+T -1  ALU_Function<0> /ALU_Function<0>
+? Terminal ALU_Function<0> in the schematic failed to match any terminal in the layout.
+T -1  f<0> /f<0>
+? Terminal f<0> in the schematic failed to match any terminal in the layout.
+T -1  f<1> /f<1>
+? Terminal f<1> in the schematic failed to match any terminal in the layout.
+T -1  f<2> /f<2>
+? Terminal f<2> in the schematic failed to match any terminal in the layout.
+T -1  f<3> /f<3>
+? Terminal f<3> in the schematic failed to match any terminal in the layout.
+T -1  p<0> /p<0>
+? Terminal p<0> in the schematic failed to match any terminal in the layout.
+T -1  p<1> /p<1>
+? Terminal p<1> in the schematic failed to match any terminal in the layout.
+T -1  p<2> /p<2>
+? Terminal p<2> in the schematic failed to match any terminal in the layout.
+T -1  p<3> /p<3>
+? Terminal p<3> in the schematic failed to match any terminal in the layout.
+T -1  q0_out /q0_out
+? Terminal q0_out in the schematic failed to match any terminal in the layout.

@@ -1,0 +1,6 @@
+( ( net
+( "nand" "nand_" )
+( "nor" "nor_" )
+( "xor" "xor_" )
+ )
+ )

@@ -1,0 +1,9 @@
+nand3 I8 ( net014, In3, S[1], S[0]);
+nand3 I2 ( net17, In2, S[1], net16);
+nand3 I1 ( net19, In1, net15, S[0]);
+nand3 I0 ( net18, In0, net15, net16);
+inv I6 ( net15, S[1]);
+inv I7 ( net16, S[0]);
+nand4 I9 ( Out, net18, net19, net17, net014);
+
+endmodule

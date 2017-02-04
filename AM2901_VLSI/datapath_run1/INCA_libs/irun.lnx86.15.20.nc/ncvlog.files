@@ -1,0 +1,27 @@
+//
+// File created by:  ncxlmode
+// Do not modify this file
+//
+/home/jlee167/ece425.work/datapath_run1/testfixture.template
+/home/jlee167/ece425.work/ece425mp2/bitcell/functional/verilog.v
+/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/nand4/functional/verilog.v
+/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/nand3/functional/verilog.v
+/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/nor2/functional/verilog.v
+/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/nand2/functional/verilog.v
+/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/inv/functional/verilog.v
+/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Analog_Parts/nmos/functional/verilog.v
+/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Analog_Parts/pmos/functional/verilog.v
+/home/jlee167/ece425.work/ece425mp2/tx_gate/functional/verilog.v
+/home/jlee167/ece425.work/datapath_run1/ihnl/cds0/netlist
+/home/jlee167/ece425.work/datapath_run1/ihnl/cds1/netlist
+/home/jlee167/ece425.work/datapath_run1/ihnl/cds2/netlist
+/home/jlee167/ece425.work/datapath_run1/ihnl/cds3/netlist
+/home/jlee167/ece425.work/datapath_run1/ihnl/cds4/netlist
+/home/jlee167/ece425.work/datapath_run1/ihnl/cds5/netlist
+/home/jlee167/ece425.work/datapath_run1/ihnl/cds6/netlist
+/home/jlee167/ece425.work/datapath_run1/ihnl/cds7/netlist
+/home/jlee167/ece425.work/datapath_run1/ihnl/cds8/netlist
+/home/jlee167/ece425.work/datapath_run1/ihnl/cds9/netlist
+/home/jlee167/ece425.work/datapath_run1/ihnl/cds15/netlist
+/home/jlee167/ece425.work/datapath_run1/ihnl/cds11/netlist
+/home/jlee167/ece425.work/datapath_run1/hdlFilesDir/cds_globals.v

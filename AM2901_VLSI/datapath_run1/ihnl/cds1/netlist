@@ -1,0 +1,25 @@
+// Library - ece425mp2, Cell - add, View - schematic
+// LAST TIME SAVED: Nov 25 18:41:46 2016
+// NETLIST TIME: Nov 26 23:21:27 2016
+`timescale 1ns / 1ns 
+
+module add ( cout, sum, cin, gen_lo, kill_hi, prop_hi );
+
+output  cout, sum;
+
+input  cin, gen_lo, kill_hi, prop_hi;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "add";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+tx_gate I1 ( cout, cin, prop_hi, prop_lo);
+pfet M0 ( cout, cds_globals.vdd_, gen_lo);
+nfet M1 ( cout, cds_globals.gnd_, kill_hi);
+xor2 I9 ( sum, prop_hi, cin);
+inv I7 ( prop_lo, prop_hi);
+
+endmodule

@@ -1,0 +1,28 @@
+// Library - ece425mp2, Cell - Q_Register, View - schematic
+// LAST TIME SAVED: Nov 23 22:04:14 2016
+// NETLIST TIME: Nov 23 22:04:21 2016
+`timescale 1ns / 1ns 
+
+module Q_Register ( Q, D, cp, en );
+
+output  Q;
+
+input  D, cp, en;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "Q_Register";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+tx_gate I17 ( net015, net017, net10, cp);
+tx_gate I18 ( net13, net010, cp, net10);
+bitcell I3 ( Q, net13);
+bitcell I2 ( net016, net017);
+inv I13 ( net015, net012);
+inv I6 ( net10, cp);
+inv I4 ( net010, net016);
+mux_2to1 I15 ( net012, Q, D, en);
+
+endmodule

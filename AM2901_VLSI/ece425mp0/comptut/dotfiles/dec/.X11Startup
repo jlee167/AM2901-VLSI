@@ -1,0 +1,7 @@
+#!/bin/csh -f
+
+xmodmap ~/.modmap
+dxclock -fg cyan -bg black -g 110x40+893+784 &
+xterm -g 80x34+0+200 &
+xman -g 110x100+893+644 &
+xsetroot -solid mediumBlue

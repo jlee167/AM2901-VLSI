@@ -1,0 +1,14 @@
+#!/bin/csh -f
+
+# colorPatch > /dev/null
+ mwm &
+ sleep 10
+
+# Setup up a clock and the main xterm window.
+
+xterm -g 80x34+10+1 +ls -sb &
+# Dclock -fg yellow -bg blue -g 190x60+925+1 -noscroll & 
+xclock -fg yellow -bg blue -hd yellow -padding 4 -g 90x80+1030+770 & 
+
+# Start the console window.
+xterm -n "Console" -g 80x6+10+655 -sb +ls -C &

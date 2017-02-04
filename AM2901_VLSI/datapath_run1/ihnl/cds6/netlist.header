@@ -1,0 +1,18 @@
+// Library - ece425mp2, Cell - latch, View - schematic
+// LAST TIME SAVED: Nov 10 21:13:22 2016
+// NETLIST TIME: Nov 14 21:34:31 2016
+`timescale 1ns / 1ns 
+
+module latch ( q, d, en );
+
+output  q;
+
+input  d, en;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "latch";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

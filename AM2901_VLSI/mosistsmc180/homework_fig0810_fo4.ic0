@@ -1,0 +1,20 @@
+* "simulator" "HSPICE" 
+* "version" "I-2013.12-1 64-BIT"
+* "format" "HSP"
+* "rundate" "15:26:43 10/11/2016 "
+* "netlist" "./homework_fig0810_fo4.sp "
+* "runtitle" "* hw2_fo6.sp"
+* time =    0.            
+* temperature =   70.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ a =   0.            
++ b =   1.8000        
++ c =  60.9282n       
++ d =   1.8000        
++ e =  60.9282n       
++ f =   1.8000        
++ vdd =   1.8000        
+***   END: Saved Operating Point ***                     

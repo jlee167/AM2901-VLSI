@@ -1,0 +1,7 @@
+tx_gate I1 ( cout, cin, prop_hi, prop_lo);
+pfet M0 ( cout, cds_globals.vdd_, gen_lo);
+nfet M1 ( cout, cds_globals.gnd_, kill_hi);
+xor2 I9 ( sum, prop_hi, cin);
+inv I7 ( prop_lo, prop_hi);
+
+endmodule

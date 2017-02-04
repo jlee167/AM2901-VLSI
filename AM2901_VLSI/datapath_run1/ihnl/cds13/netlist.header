@@ -1,0 +1,18 @@
+// Library - ece425mp1, Cell - inv, View - schematic
+// LAST TIME SAVED: Oct  1 15:56:31 2016
+// NETLIST TIME: Nov 23 22:00:33 2016
+`timescale 1ns / 1ns 
+
+module inv0 ( y, a );
+
+output  y;
+
+input  a;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp1";
+    specparam CDS_CELLNAME = "inv";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

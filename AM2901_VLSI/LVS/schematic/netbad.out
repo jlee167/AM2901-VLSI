@@ -1,0 +1,172 @@
+N /I7/I1/net26
+? Net does not cross-match. It has 5 connections.
+N /I5/I1/I12/I9/net010
+? Net does not cross-match. It has 5 connections.
+N /I8/I1/net26
+? Net does not cross-match. It has 5 connections.
+N /I6/I1/net26
+? Net does not cross-match. It has 5 connections.
+N /I8/I1/I12/I9/net010
+? Net does not cross-match. It has 5 connections.
+N /I6/I1/I12/I9/net010
+? Net does not cross-match. It has 5 connections.
+N /I7/I1/I12/I9/net010
+? Net does not cross-match. It has 5 connections.
+N /I5/I1/net26
+? Net does not cross-match. It has 5 connections.
+N /vdd!
+? Net does not cross-match. It has 1968 connections.
+N /ALU_Function<0>
+? Net does not cross-match. It has 25 connections.
+N /p<0>
+? Net does not cross-match. It has 13 connections.
+N /gnd!
+? Net does not cross-match. It has 1740 connections.
+N /p<2>
+? Net does not cross-match. It has 13 connections.
+N /p<1>
+? Net does not cross-match. It has 13 connections.
+N /I8/I1/I13/net19
+? Net does not cross-match. It has 6 connections.
+N /I8/I6/I2/net17
+? Net does not cross-match. It has 2 connections.
+N /I7/I6/I2/net17
+? Net does not cross-match. It has 2 connections.
+N /p<3>
+? Net does not cross-match. It has 13 connections.
+N /I7/I1/I13/net19
+? Net does not cross-match. It has 6 connections.
+N /I5/I1/I13/net19
+? Net does not cross-match. It has 6 connections.
+N /I6/I1/I13/net19
+? Net does not cross-match. It has 6 connections.
+N /I5/I8/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /net65
+? Net does not cross-match. It has 12 connections.
+N /I8/I1/I13/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /net63
+? Net does not cross-match. It has 12 connections.
+N /I6/I8/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I8/I1/I13/net16
+? Net does not cross-match. It has 6 connections.
+N /I8/I1/I13/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /q0_out
+? Net does not cross-match. It has 11 connections.
+N /I7/I8/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I8/I10/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I8/I10/net16
+? Net does not cross-match. It has 6 connections.
+N /I8/I8/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /f<0>
+? Net does not cross-match. It has 12 connections.
+N /I8/I8/net16
+? Net does not cross-match. It has 6 connections.
+N /I8/I8/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /f<3>
+? Net does not cross-match. It has 12 connections.
+N /I5/I8/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I7/I1/I13/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /I6/I8/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /f<2>
+? Net does not cross-match. It has 14 connections.
+N /I7/I1/I13/net16
+? Net does not cross-match. It has 6 connections.
+N /I7/I1/I13/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I7/I8/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /f<1>
+? Net does not cross-match. It has 14 connections.
+N /I7/I10/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /ALU_Dest<3>
+? Net does not cross-match. It has 25 connections.
+N /I5/I1/I13/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I7/I10/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I7/I10/net16
+? Net does not cross-match. It has 6 connections.
+N /I6/I1/I13/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I7/I8/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /ALU_Dest<0>
+? Net does not cross-match. It has 25 connections.
+N /I7/I1/I13/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I7/I8/net16
+? Net does not cross-match. It has 6 connections.
+N /I7/I8/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I8/I1/I13/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I5/I1/I13/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /I6/I1/I13/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I5/I1/I13/net16
+? Net does not cross-match. It has 6 connections.
+N /I5/I1/I13/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I7/I1/I13/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I5/I10/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /I8/I1/I13/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I5/I10/net16
+? Net does not cross-match. It has 6 connections.
+N /I5/I10/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I5/I1/I13/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I5/I8/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /I5/I10/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I5/I8/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I5/I8/net16
+? Net does not cross-match. It has 6 connections.
+N /I6/I10/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I6/I1/I13/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /I7/I10/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I6/I1/I13/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I6/I1/I13/net16
+? Net does not cross-match. It has 6 connections.
+N /I8/I10/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I6/I10/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /I5/I10/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I6/I10/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I6/I10/net16
+? Net does not cross-match. It has 6 connections.
+N /I7/I10/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I6/I8/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I6/I8/net16
+? Net does not cross-match. It has 6 connections.
+N /I6/I10/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I6/I8/I1/net14
+? Net does not cross-match. It has 2 connections.

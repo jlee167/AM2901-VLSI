@@ -1,0 +1,32 @@
+// Verilog HDL and netlist files of
+// "ece425mp2 regfile schematic"
+
+// HDL models
+
+// HDL file - ece425mp2, bitcell, functional.
+/home/jlee167/ece425.work/ece425mp2/bitcell/functional/verilog.v
+
+// HDL file - ece425mp2, tx_gate, functional.
+/home/jlee167/ece425.work/ece425mp2/tx_gate/functional/verilog.v
+
+// HDL file - NCSU_Digital_Parts, inv, functional.
+/software/ncsu-cdk-1.6.0.beta/lib/NCSU_Digital_Parts/inv/functional/verilog.v
+
+
+// End HDL models
+
+
+// alias module. For internal use only.
+hdlFilesDir/cds_alias.v
+
+// Netlisted models
+
+// netlist file - ece425mp2, latch, schematic.
+ihnl/cds1/netlist
+// netlist file - ece425mp2, regbit, schematic.
+ihnl/cds0/netlist
+// netlist file - ece425mp2, regfile, schematic.
+ihnl/cds2/netlist
+
+
+// End HDL models

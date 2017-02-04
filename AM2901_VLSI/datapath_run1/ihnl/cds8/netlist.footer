@@ -1,0 +1,25 @@
+tx_gate I90 ( bitline_b, net057, net041, net056);
+latch I49 ( data_b, bitline_b, cp);
+latch I54 ( data_a, bitline_a, cp);
+inv I88 ( net056, net041);
+inv I79 ( net057, net052);
+inv I84 ( net052, data_write);
+regbit I41 ( bitline_a, bitline_b, select_a_hi[6], select_b_hi[6]);
+regbit I36 ( bitline_a, bitline_b, select_a_hi[11], select_b_hi[11]);
+regbit I34 ( bitline_a, bitline_b, select_a_hi[13], select_b_hi[13]);
+regbit I33 ( bitline_a, bitline_b, select_a_hi[14], select_b_hi[14]);
+regbit I47 ( bitline_a, bitline_b, select_a_hi[0], select_b_hi[0]);
+regbit I44 ( bitline_a, bitline_b, select_a_hi[3], select_b_hi[3]);
+regbit I38 ( bitline_a, bitline_b, select_a_hi[9], select_b_hi[9]);
+regbit I39 ( bitline_a, bitline_b, select_a_hi[8], select_b_hi[8]);
+regbit I35 ( bitline_a, bitline_b, select_a_hi[12], select_b_hi[12]);
+regbit I37 ( bitline_a, bitline_b, select_a_hi[10], select_b_hi[10]);
+regbit I45 ( bitline_a, bitline_b, select_a_hi[2], select_b_hi[2]);
+regbit I46 ( bitline_a, bitline_b, select_a_hi[1], select_b_hi[1]);
+regbit I42 ( bitline_a, bitline_b, select_a_hi[5], select_b_hi[5]);
+regbit I43 ( bitline_a, bitline_b, select_a_hi[4], select_b_hi[4]);
+regbit I40 ( bitline_a, bitline_b, select_a_hi[7], select_b_hi[7]);
+regbit I32 ( bitline_a, bitline_b, select_a_hi[15], select_b_hi[15]);
+nor2 I91 ( net041, write_en, cp);
+
+endmodule

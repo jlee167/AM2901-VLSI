@@ -1,0 +1,216 @@
+/* 
+   filepath:        <tutorial_install_dir>/.cdsinit
+   version:         4.4
+   owner:           Christopher Salander
+   contributors:    Nalayini Gunan, Mike Linnik, Alex Wong, Mark McGee
+   
+   This file can be copied into a users home or project directory
+   and customized.
+
+   The site initialization file in <cds_install_dir>/local/.cdsinit should
+   set all the defaults for the site.
+
+   For more information on site initialization look at the files
+
+      <cds_install_dir>/samples/local/
+                                    cdsinit
+                                    aaConfig.il
+                                    dmConfig.il
+                                    leConfig.il
+                                    plotConfig.il
+                                    schConfig.il
+                                    sysConfig.il
+                                    uiConfig.il
+                             
+      
+
+   The user may copy portions from the above files into the
+   home or project customization file and modify the defaults.
+
+   It is recommended that the user copy only portions as opposed
+   to copying the whole files.
+
+   Appropriate items for the user's customization file are
+
+   1. Library search path
+   2. Specific bind keys
+   3. Custom SKILL procedures
+   4. User preference options
+   5. Color/stipple preferences
+   6. Form placements
+
+   In order for any window placements to work correctly the following 
+   X resource must be set in the .Xdefaults or .xresources file
+   pertaining to your hardware platform.
+
+	Mwm*clientAutoPlace:             False
+
+   After setting the resource read in the resource file with the command
+
+	xrdb <resource_filename>
+   
+   and restart the Motif window manager.
+
+   The function 
+             prependInstallPath("string")
+   adds the installation path to the string argument
+   For this reason there should NOT be a space at the beginning of the
+   string.
+   There SHOULD be a space at the end of the string if more paths are to
+   follow.
+   This function is used to make path specification in this file
+   independant of the exact installation path.
+
+   The function let() creates local variables ( example: libPath ). 
+   This makes sure that any global variables are not accidentally modified.
+
+*/
+;
+;
+;################################################
+;#
+;# SETTINGS FOR SKILL PATH and SKILL PROGRAMMING
+;#
+;################################################
+;
+;  The function sstatus() sets the status of variables.
+;  The variable writeProtect controls if a SKILL function can be
+;  redefined or not;
+;
+;  Any functions defined after writeProtect = t CANNOT be redefined.
+;  Any functions defined after writeProtect = nil CAN be redefined.
+;  If you are going to create SKILL programs and define functions set the
+;  status of writeProtect to nil at the beginning of your session.
+;
+;  Set skill search path. The SKILL search path contains directories
+;  to be searched to locate SKILL programs when program names are
+;  specified without full path names.
+;  The operation could be reading, writing or loading a SKILL program.
+;
+;  Source technology files are considered SKILL files and when loading 
+;  or dumping the technology file SKILL search path will be used.
+;
+;
+
+sstatus(writeProtect nil)
+
+let((skillPath)
+   skillPath= strcat(
+    ". ~ "                                         ; Current, home directory
+    prependInstallPath("samples/techfile ")         ; sample source technology files
+   )
+   setSkillPath(skillPath)
+)
+;
+;################################################
+;#
+;# SET BINDKEYS				#
+;#
+;################################################
+;
+;  The bind keys supplied with the Cadence software should have
+;  been loaded by the site .cdsinit file.
+;  In case they were not you may selectively load them by keeping or
+;  deleting the name of the bind key file from the bindKeyFileList
+;  below.
+;
+; 
+let( (bindKeyFileList file path saveSkillPath)
+    bindKeyFileList = '(
+;                "leBindKeys.il" 
+                "schBindKeys.il"
+                    )
+    
+    ;this is the path that is searched for the files
+    path = strcat(
+              ".   ~   "
+              prependInstallPath("local ")
+              prependInstallPath("samples/local")
+             )
+    saveSkillPath=getSkillPath()
+    setSkillPath(path)
+;
+;
+; In order to load the bind keys remove the comment from the next 5 lines
+
+   foreach(file bindKeyFileList
+      if(isFile(file ) then
+         loadi(file)
+        )
+   )
+;
+    setSkillPath(saveSkillPath)
+)
+
+;
+;
+;  An individual user may wish to add some bindkeys of his own or
+;  over ride some default loaded bindkeys.  For more information about
+;  bindkeys see the manual "SKILL LANGUAGE FUNDAMENTALS", Volume 2
+;  Chapter 4.
+;
+;  Here is an example of setting one bindkey on "F2" than prints 
+;  "hellow world" to the CIW when pressed in the CIW.
+;hiSetBindKey("Command Interpreter" "<Key>F2" "printf(\"Hello World\")") 
+;
+;  Here is an example of setting keys for more than one application
+;
+;let( (app appList)
+;  appList = '( 
+;             "Command Interpreter"
+;             "Schematics"
+;             "Symbol"
+;   
+;    Add other applications here 
+;
+;    )
+;  foreach(app appList
+;    hiSetBindKey(app "<Key>F4" "printf(\"Hello \")") 
+;    hiSetBindKey(app "<Key>F5" "printf(\"World\")") 
+;
+;    Add more bind keys here
+;
+;
+;  )
+;)
+; 
+;########################################################
+;#
+;# STARTING FRAMEMAKER AUTOMATICALLY and SETTING UP HELP
+;#
+;######################################################## 
+;
+; The following call starts up Frameviewer when you start the CADENCE
+; Software. Frameviewer is used to view on-line documentation.
+;
+; The path of the Frameviewer executable is assumed to be
+;
+; <cds_install_dir>/frame/bin/viewer
+;
+; If your frameviewer ( or framemaker ) is installed in another path
+; change the path to the viewer in the command.
+;
+when( fmKickFM() != 1
+    OpusStartedFrame = t
+    system(
+	strcat( cdsGetInstPath() "/tools/infotools/helpViewer/bin/cdsHelp "
+		cdsGetInstPath() "/tools/infotools/helpViewer "
+		"viewer \"-server -rpcProp "
+		if( hiGraphicMode() "cdsHelpViewer" "none" )
+		"\" > /dev/null ; sleep 10"
+	)
+    )
+)
+;
+;################################################
+;#
+;# MISCELLANEOUS
+;#
+;################################################
+;
+;setPrompts("Ready >" "")
+;editor = "xterm -geometry 85x50 -e vi";
+;
+printf("END OF USER CUSTOMIZATION\n")
+;
+;END OF USER CUSTOMIZATION

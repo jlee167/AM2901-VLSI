@@ -1,0 +1,40 @@
+# @(#)openwin-menu 23.7 90/06/19
+# openwin-menu - OpenWindows X11/NeWS Server default root menu file.
+
+"Workspace" TITLE
+
+"Programs" MENU
+    "Command Tool..." DEFAULT	exec $OPENWINHOME/bin/xview/cmdtool
+    "Text Editor..."		exec $OPENWINHOME/bin/xview/textedit
+    "File Manager..."		exec $OPENWINHOME/bin/xview/filemgr
+    "Mail Tool..."		exec $OPENWINHOME/bin/xview/mailtool 
+    "Calendar Manager..."	exec $OPENWINHOME/bin/xview/cm 
+    "Clock..."			exec $OPENWINHOME/bin/xview/clock
+    "Calculator..."		exec $OPENWINHOME/bin/xview/calctool 
+    "Print Tool..."		exec $OPENWINHOME/bin/xview/printtool
+    "Tape Tool..."		exec $OPENWINHOME/bin/xview/tapetool
+    "Binder..."			exec $OPENWINHOME/bin/xview/binder
+    "Snapshot..."		exec $OPENWINHOME/bin/xview/snapshot
+    "Icon Editor..."		exec $OPENWINHOME/bin/xview/iconedit
+    "Performance Meter..."	exec $OPENWINHOME/bin/xview/perfmeter
+    "Shell Tool..."		exec $OPENWINHOME/bin/xview/shelltool -font -adobe-courier-medium-r-normal--18-180-75-75-m-110-iso8859-1
+    "Dbx Tool..."		exec $OPENWINHOME/bin/xview/dbxtool
+    "Demos..."			exec $OPENWINHOME/bin/hyperview xnewsdemo.hv
+    "xterm"                     exec $OPENWINHOME/demo/xterm
+"Programs" END PIN
+
+"Utilities" MENU
+    "Refresh"	    DEFAULT	REFRESH
+    "Reset Input"		POSTSCRIPT /resetinput ClassUI send
+    "Save Workspace"		SAVE_WORKSPACE
+    "Lock Screen"		exec xlock
+    "Console..."		exec $OPENWINHOME/bin/xview/cmdtool -C
+"Utilities" END
+
+"Properties..."			PROPERTIES
+
+" "				NOP
+
+"Exit..."			EXIT
+
+

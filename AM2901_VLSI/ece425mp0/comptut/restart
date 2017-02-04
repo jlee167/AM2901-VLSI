@@ -1,0 +1,270 @@
+#!/bin/csh -f
+# Restart script for the Composer 4.4 tutorial
+#
+# filepath: <cds_inst_dir>/tools/dfII/samples/tutorials/composer
+# version:  4.4
+# owner:    Christopher Salander
+#
+# This script copies the contents of the
+# tools/dfII/samples/tutorials/composer directory (or a directory
+# of the user's choice) into ~/comptut or a specified directory.
+#
+# Definition of Variables
+#
+# DefHierLoc   - default hierarchy location of the tutorial directory
+# TutorDir     - directory where the user wants the tutorial installed. 
+# problem      - set to "" or "(correct)"; used for the
+#                prompt asking the user to enter a directory
+#                or the "correct" directory if he entered
+#                it wrong the first time.
+# InstallLoc   - absolute path to tutorial data base.
+# NoInstall    - set true (1) if the specified tutorial data
+#                location does not exist and set to false (0) if
+#                it does.
+# loop         - a while loop control variable.
+# choice       - case variable used for selecting whether the user
+#	 	 wants to install or reset the tutorial.
+# choiceLoop   - loop control for initial command (whole code)
+# foo          - dummy input variable.
+# tf1, tf2     - flags that indicate the presence of technology
+#		 files in the tutorial library
+
+# Set defaults
+
+set CDS_INST_DIR = `cds_root`
+set DefHierLoc = ($CDS_INST_DIR/tools/dfII/samples/tutorials/composer)
+set InstallLoc=($DefHierLoc)
+set choiceLoop = 1
+set problem = ""
+set Answer = ""
+set tf1 = 0
+set tf2 = 0
+
+# Opening Screen
+
+clear
+echo Composer Tutorial Installation and Reset Script
+echo -------------------------------------------------
+echo ""
+echo "This script copies the tutorial files into your"
+echo "tutorial directory."
+echo ""
+echo "Do not run this script while you are running Cadence"
+echo "software, as it might overwrite your library data."
+echo ""
+echo "Press Return to select default values (enclosed in [])."
+echo ""
+echo "To abort, press Control-c and then press Return."
+echo ""
+echo -n "Press Return to continue:"
+set foo=$<
+clear
+
+# Ask if the user is installing the tutorial, or
+# resetting it after someone used it.
+
+echo ""
+echo "Choose one: (1 or 2)"
+echo ""
+echo "1. Install the Composer tutorial."
+echo "2. Reset the Composer tutorial."
+echo ""
+
+while ($choiceLoop == 1)
+
+set choice = $<
+
+switch ($choice)
+
+case [1]:
+
+# Find out where the tutorial files are.  Ideally, they should
+# be in their usual place in the Cadence hierarchy, and the user
+# should have a path to that hierarchy.
+
+    echo ""
+    echo If you are copying the tutorial from the Cadence hierarchy 
+    echo type "Y" and press Return, or else type "N" and press Return.
+    echo ""
+    set Answer=
+    while ("$Answer" == "")
+        set Answer = $<
+        switch ("$Answer")
+        case [Yy]*:
+	    set NoInstall = 0
+            breaksw
+        case [Nn]*:
+            set NoInstall = 1
+	    set InstallLoc = ""
+            breaksw
+        default:
+            echo -n "Please type Y or N: "
+            set Answer =
+        endsw
+    end
+
+# Verification of the tutorial directory within given hierarchy.
+# This is not checked if the hierarchy does not exist from
+# the previous step. If the tutorial files exist where
+# they should, the default value is established for the next
+# section.
+
+    echo ""
+    if ($NoInstall == 0) then
+        echo "The tutorial files should reside within your Cadence"
+        echo "hierarchy at $DefHierLoc."
+        echo "Verifying that this directory exists..."
+        echo ""
+        set InstallLoc=($DefHierLoc)
+        if (-d $InstallLoc/TTL_tutor/) then
+            echo "Directory exists."
+            echo ""
+            set NoInstall = 0
+        else
+	    echo That is not the Composer tutorial directory.
+            echo ""
+	    set NoInstall = 1
+            set problem="(correct) "
+            set InstallLoc=""
+        endif
+    endif
+
+# Location of tutorial database to be installed.
+# If the data was not found in the hierarchy in the above
+# section, the default is left blank and the user is
+# asked to provide some location where the files can
+# be found. This script does not test for the validity
+# of the data within the directory, just that the
+# directory exists.
+
+    if($NoInstall == 1) then
+        set loop=1
+        while ($loop == 1)
+            echo ""
+            echo "Please enter the $problem pathname to your Composer"
+            echo -n "tutorial files:"
+            set InstallLoc=$<
+	    if (-d $InstallLoc/TTL_tutor/) then
+	        set loop=0
+            else
+	        echo "That is not the tutorial directory."
+		echo ""
+            endif
+            if ($loop == 1) then
+	        set problem="correct"
+                set InstallLoc=""
+            endif
+        end
+    endif
+
+# The destination of the tutorial files, where the tutorial 
+# should be installed. The directory is checked for its 
+# existence and the TutorDir variable is set.
+
+    echo ""
+    set loop=1
+    while ($loop == 1)
+        echo Please enter the pathname to your tutorial
+        echo -n "installation directory [~/comptut]: "
+        set TutorDir=$<
+        if ($TutorDir == "") then
+            set TutorDir=(~/comptut)
+        endif
+        if (-d $TutorDir/) then
+            set loop=0
+        else
+	    mkdir $TutorDir
+	    set loop=0
+        endif
+    end
+
+# The actual copying of the tutorial direction from its
+# source to its destination, including dotfiles.
+
+    echo ""
+    echo Copying...
+    cp -r $InstallLoc/* $TutorDir
+    cp $InstallLoc/.???* $TutorDir
+
+# This section creates the entries for the cds.lib file.
+# It uses the $CDS_INST_DIR and $TutorDir variables to set
+# up the library path entries for each library.
+
+    set LibPath = $CDS_INST_DIR/tools/dfII/etc/cdslib
+    set LibPath2 = $CDS_INST_DIR/tools/dfII/samples/cdslib
+
+    echo "DEFINE basic $LibPath/basic" >>! $TutorDir/cds.lib
+    echo "DEFINE US_8ths $LibPath/sheets/US_8ths" >>! $TutorDir/cds.lib
+    echo "DEFINE analogLib $LibPath/artist/analogLib" >>! $TutorDir/cds.lib
+    echo "DEFINE sample $LibPath2/sample" >>! $TutorDir/cds.lib
+    echo "DEFINE TTL_tutor $TutorDir/TTL_tutor" >>! $TutorDir/cds.lib
+    echo "DEFINE master $TutorDir/master" >>! $TutorDir/cds.lib
+    echo "DEFINE tutorial $TutorDir/tutorial" >>! $TutorDir/cds.lib
+    echo "DEFINE user_ASIC $TutorDir/user_ASIC" >>! $TutorDir/cds.lib
+
+    echo ""
+    echo The Composer tutorial has been installed in $TutorDir.
+
+set choiceLoop = 0
+breaksw
+
+case [2]:
+
+# The Reset choice.  Find out where the user has
+# the tutorial installed.
+
+    set loop=1
+    while ($loop == 1)
+	echo ""
+        echo Please enter the pathname to your tutorial
+        echo -n "directory [~/comptut]: "
+	echo ""
+        set TutorDir=$<
+        if ($TutorDir == "") then
+            set TutorDir=(~/comptut)
+        endif
+        if (-d $TutorDir/TTL_tutor/) then
+            set loop=0
+        else
+	    echo ""
+	    echo "That is not the tutorial directory."
+        endif
+    end
+
+# Delete the old design data from the tutorial library,
+# but keep the techfiles.  (Test to see if they exist,
+# make them dot files so that they survive the rm, then
+# restore them.)
+
+    if(-e $TutorDir/tutorial/techfile.cd%) then
+	mv $TutorDir/tutorial/techfile.cd% $TutorDir/tutorial/.tf1
+	set tf1 = 1
+    endif
+    if(-e $TutorDir/tutorial/techfile.cds) then
+	mv $TutorDir/tutorial/techfile.cds $TutorDir/tutorial/.tf2
+        set tf2 = 1
+    endif
+    rm -rf $TutorDir/tutorial/*
+    echo ""
+    echo Old data removed.
+    echo ""
+    if(tf1 == 1) then
+	mv $TutorDir/tutorial/.tf1 $TutorDir/tutorial/techfile.cd%
+	set tf1 = 0
+    endif
+    if(tf2 == 1) then
+	mv $TutorDir/tutorial/.tf2 $TutorDir/tutorial/techfile.cds
+        set tf2 = 0
+    endif
+    echo The Composer tutorial has been reset and is ready to use.
+
+set choiceLoop = 0
+breaksw
+
+default:
+    echo -n Please type 1 or 2.
+    echo ""
+
+endsw
+
+end

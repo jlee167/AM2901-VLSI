@@ -1,0 +1,10 @@
+# File Created by Jihoon Lee at Tue Sep  6 09:48:12 2016
+# assisted by CdsLibEditor
+DEFINE basic /software/cadence-Aug2016/IC617/tools/dfII/etc/cdslib/basic
+DEFINE US_8ths /software/cadence-Aug2016/IC617/tools/dfII/etc/cdslib/sheets/US_8ths
+DEFINE analogLib /software/cadence-Aug2016/IC617/tools/dfII/etc/cdslib/artist/analogLib
+DEFINE sample /software/cadence-Aug2016/IC617/tools/dfII/samples/cdslib/sample
+DEFINE TTL_tutor TTL_tutor
+DEFINE master master
+DEFINE tutorial tutorial
+DEFINE user_ASIC user_ASIC

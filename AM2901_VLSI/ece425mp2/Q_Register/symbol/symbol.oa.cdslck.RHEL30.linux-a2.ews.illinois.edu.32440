@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      jlee167
+HostName                       linux-a2.ews.illinois.edu
+ProcessIdentifier              32440
+ProcessCreationTime_UTC        1479252562
+ProcessCreationTime_Readable   Tue Nov 15 17:29:22 2016 CST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/jlee167/ece425.work/ece425mp2/Q_Register/symbol/symbol.oa.cdslck
+TimeEditLocked                 Tue Nov 15 23:32:25 2016 CST

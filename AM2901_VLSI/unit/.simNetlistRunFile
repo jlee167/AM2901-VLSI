@@ -1,0 +1,17 @@
+simVerilogNetlistFileList = '(
+    (("ece425mp2" "regfile") 
+	("cds2/netlist" "cds2/map" "schematic")
+    ) 
+    (("ece425mp2" "regbit") 
+	("cds0/netlist" "cds0/map" "schematic")
+    ) 
+    (("ece425mp2" "latch") 
+	("cds1/netlist" "cds1/map" "schematic")
+    )
+)
+simVerilogNetlistFileLibList = '("ece425mp2")
+simVerilogNetlistFileCellList = '(("ece425mp2" 
+	("latch" "regbit" "regfile")
+    )
+)
+hnlIncrementalDirectory = '"ihnl"

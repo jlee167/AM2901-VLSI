@@ -1,0 +1,21 @@
+!
+! Swap capslock with control key
+!
+remove Lock = Caps_Lock
+!
+! Change F12 to backslash/bar
+keycode 114 = backslash bar
+! Change Caps_Lock to Control_R
+keycode 176 = Control_R
+! Change quoteleft/asciitilde to Escape
+keycode 191 = Escape
+! Change less/greater to backslash/bar
+keycode 201 = backslash bar
+! Change comma to comma/less
+keycode 232 = comma less
+! Change period to period/greater
+keycode 237 = period greater
+! Change backslash/bar to quoteleft/asciitilde
+keycode 247 = quoteleft asciitilde
+!
+add Control = Control_R

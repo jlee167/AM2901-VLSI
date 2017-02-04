@@ -1,0 +1,88 @@
+# James Lee mwmrc  note that .Xdefaults points 
+# to JamesKeyBinding and James Button Bindings
+#
+
+
+#
+# menu pane descriptions
+#
+
+# Root Menu Description
+Menu RootMenu
+{
+    "Root Menu"		f.title
+    "New Window"	f.exec "xterm -geometry -1+1 -bg black -fg wheat &"
+    "Big Window"	f.exec "xterm -geometry 108x45 -fg wheat -bg midnightblue &"
+    "scrollin window"	f.exec "xterm -sb"
+    "Shuffle Up"	f.circle_up
+    "Shuffle Down"	f.circle_down
+    "Refresh"		f.refresh
+    no-label		f.separator
+    "Restart..."	f.restart
+    "exit"		f.quit_mwm
+}
+# window border menu
+Menu BorderMenu
+{
+    "Border Menu"	f.title
+    "Close"		f.minimize
+    "Move"		f.move
+    "Resize"		f.resize
+    "Color"		f.focus_color
+    "Front"		f.raise
+    "Back"		f.lower
+    "Redisplay"		f.refresh
+    "Quit"		f.kill
+}
+Menu iconMenu
+{
+    "Refresh"		f.refresh_win
+    "Move"		f.move
+    "Front"		f.raise
+    "Back"		f.lower
+    "Open"		f.normalize
+    "Iconify"		f.minimize
+    "Full Screen"	f.maximize
+    "no-label"		f.separator
+    "Quit"		f.kill
+}
+#
+# key binding descriptions
+#
+
+Keys JamesKeyBindings
+{
+    Shift<Key>Escape            icon|window             f.post_wmenu
+    Meta<Key>space              icon|window             f.post_wmenu
+    Meta<Key>Tab                root|icon|window        f.next_key
+    Meta Shift<Key>Tab		root|icon|window        f.prev_key
+    Meta<Key>Escape             root|icon|window        f.next_key
+    Meta Shift<Key>Escape       root|icon|window        f.prev_key
+    Meta<Key>Down               root|icon|window        f.circle_down
+    Meta<Key>Up                 root|icon|window        f.circle_up
+    Meta Ctrl Shift<Key>exclam	root|icon|window        f.set_behavior
+    Meta<Key>F6			window			f.next_key transient
+    Meta<Key>F7			root			f.menu RootMenu
+}
+
+
+#
+# button binding descriptions
+#
+
+Buttons JamesButtonBindings
+{
+    <Btn1Down>          frame           f.raise
+    <Btn1Down>          icon            f.normalize
+    <Btn2Down>          frame|icon      f.move
+    <Btn3Down>          root            f.menu  RootMenu
+    <Btn3Down>          frame           f.menu  BorderMenu
+    <Btn3Down>          icon            f.menu  iconMenu
+    Meta<Btn1Down>	icon|window     f.move
+    Meta<Btn3Down>	window          f.minimize
+}
+
+
+#
+#  END OF mwm RESOURCE DESCRIPTION FILE
+#

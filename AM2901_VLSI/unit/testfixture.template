@@ -1,0 +1,27 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  data_a, data_b;
+
+reg  cp, data_write, write_en;
+
+reg [15:0]  select_b_hi;
+reg [15:0]  select_a_hi;
+
+
+
+regfile top(data_a, data_b, cp, data_write, select_a_hi, select_b_hi, 
+     write_en); 
+ 
+
+`ifdef verilog
+
+ //please enter any additional verilog stimulus in the /home/jlee167/ece425.work/unit/testfixture.verilog file
+`include "/home/jlee167/ece425.work/unit/testfixture.verilog"
+
+`endif
+
+endmodule 

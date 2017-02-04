@@ -1,0 +1,18 @@
+// Library - ece425mp2, Cell - mux_2to1, View - schematic
+// LAST TIME SAVED: Nov 23 22:04:03 2016
+// NETLIST TIME: Nov 23 22:04:21 2016
+`timescale 1ns / 1ns 
+
+module mux_2to1 ( Out, In0, In1, s );
+
+output  Out;
+
+input  In0, In1, s;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "mux_2to1";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

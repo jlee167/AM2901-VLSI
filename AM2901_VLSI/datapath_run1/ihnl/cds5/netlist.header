@@ -1,0 +1,20 @@
+// Library - ece425mp2, Cell - alu, View - schematic
+// LAST TIME SAVED: Nov 23 22:04:11 2016
+// NETLIST TIME: Nov 23 22:04:21 2016
+`timescale 1ns / 1ns 
+
+module alu ( cout, f, p, Select, cin, inv_r, inv_s, r, s );
+
+output  cout, f, p;
+
+input  cin, inv_r, inv_s, r, s;
+
+input [1:0]  Select;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "alu";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

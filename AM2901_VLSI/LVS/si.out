@@ -1,0 +1,1101 @@
+@(#)$CDS: LVS version 6.1.7-64b 07/05/2016 20:10 (sjfhw313) $
+
+Command line: /software/cadence-Aug2016/IC617/tools.lnx86/dfII/bin/64bit/LVS -dir /home/jlee167/ece425.work/LVS -l -s -t /home/jlee167/ece425.work/LVS/layout /home/jlee167/ece425.work/LVS/schematic
+Like matching is enabled.
+Net swapping is enabled.
+Using terminal names as correspondence points.
+
+    Net-list summary for /home/jlee167/ece425.work/LVS/layout/netlist
+       count
+        988             nets
+        76              terminals
+        1072            pmos
+        1072            nmos
+
+    Net-list summary for /home/jlee167/ece425.work/LVS/schematic/netlist
+       count
+        988             nets
+        78              terminals
+        1072            pmos
+        1072            nmos
+
+
+    Terminal correspondence points
+    N971      N43       ALU_Dest<0>
+    N962      N39       ALU_Dest<1>
+    N950      N42       ALU_Dest<2>
+    N943      N31       ALU_Dest<3>
+    N932      N21       ALU_Dest<4>
+    N924      N22       ALU_Dest<5>
+    N941      N36       ALU_Function<0>
+    N930      N65       ALU_Function<1>
+    N923      N9        ALU_Function<2>
+    N916      N16       ALU_Function<3>
+    N986      N38       ALU_Function<4>
+    N960      N8        ALU_Operand<0>
+    N948      N57       ALU_Operand<1>
+    N940      N63       ALU_Operand<2>
+    N929      N52       ALU_Operand<3>
+    N939      N51       c<0>
+    N928      N50       c<1>
+    N922      N53       c<2>
+    N915      N24       c<3>
+    N979      N58       cin
+    N958      N12       cp
+    N985      N75       d<0>
+    N976      N76       d<1>
+    N968      N78       d<2>
+    N956      N14       d<3>
+    N981      N11       f0_in
+    N954      N32       f3_in
+    N917      N33       f<0>
+    N987      N4        f<1>
+    N977      N19       f<2>
+    N970      N44       f<3>
+    N961      N34       p<0>
+    N949      N60       p<1>
+    N942      N61       p<2>
+    N931      N74       p<3>
+    N959      N79       q0_in
+    N937      N10       q0_out
+    N933      N68       q3_in
+    N918      N29       q3_out
+    N980      N48       reg_wr
+    N969      N56       select_a_hi<0>
+    N978      N17       select_a_hi<10>
+    N972      N7        select_a_hi<11>
+    N963      N20       select_a_hi<12>
+    N951      N62       select_a_hi<13>
+    N944      N69       select_a_hi<14>
+    N934      N37       select_a_hi<15>
+    N957      N18       select_a_hi<1>
+    N947      N13       select_a_hi<2>
+    N938      N59       select_a_hi<3>
+    N926      N45       select_a_hi<4>
+    N920      N35       select_a_hi<5>
+    N913      N5        select_a_hi<6>
+    N983      N23       select_a_hi<7>
+    N974      N26       select_a_hi<8>
+    N966      N54       select_a_hi<9>
+    N955      N40       select_b_hi<0>
+    N927      N73       select_b_hi<10>
+    N921      N71       select_b_hi<11>
+    N914      N64       select_b_hi<12>
+    N984      N6        select_b_hi<13>
+    N975      N72       select_b_hi<14>
+    N967      N41       select_b_hi<15>
+    N946      N25       select_b_hi<1>
+    N936      N28       select_b_hi<2>
+    N925      N15       select_b_hi<3>
+    N919      N30       select_b_hi<4>
+    N912      N49       select_b_hi<5>
+    N982      N55       select_b_hi<6>
+    N973      N77       select_b_hi<7>
+    N965      N2        select_b_hi<8>
+    N953      N46       select_b_hi<9>
+    N964      N3        y<0>
+    N952      N70       y<1>
+    N945      N66       y<2>
+    N935      N47       y<3>
+
+Devices in the netlist but not in the rules:
+        pmos nmos
+
+    Ill-defined correspondence points.
+
+	N931	N74  Accepted because one is a subset of the other
+	N961	N34  Accepted because one is a subset of the other
+	N949	N60  Accepted because one is a subset of the other
+	N961	N34  Accepted because one is a subset of the other
+	N942	N61  Accepted because one is a subset of the other
+	N942	N61  Accepted because one is a subset of the other
+	N949	N60  Accepted because one is a subset of the other
+	N931	N74  Accepted because one is a subset of the other
+
+
+        Device summary for layout
+                   bad  total
+            pmos     4   1072
+            nmos    29   1072
+
+
+        Device summary for schematic
+                   bad  total
+            pmos     4   1072
+            nmos    29   1072
+
+45 net-list ambiguities were resolved by random selection.
+
+The net-lists failed to match.
+
+                             layout  schematic
+                                instances
+        un-matched              33      33     
+        rewired                 196     0      
+        size errors             0       0      
+        pruned                  0       0      
+        active                  2144    2144   
+        total                   2144    2144   
+
+                                  nets
+        un-matched              86      86     
+        merged                  0       0      
+        pruned                  0       0      
+        active                  988     988    
+        total                   988     988    
+
+                                terminals
+        un-matched              12      12     
+        matched but
+        different type          0       0      
+        total                   76      78     
+
+
+Probe files from /home/jlee167/ece425.work/LVS/schematic
+
+devbad.out:
+I /I7/I1/I13/I8/2
+? Device does not cross-match.
+I /I8/I1/I11/I8/M6
+? Device does not cross-match.
+I /I8/I1/I12/I9/M9
+? Device does not cross-match.
+I /I6/I1/I11/I8/M5
+? Device does not cross-match.
+I /I7/I1/I11/I8/M5
+? Device does not cross-match.
+I /I8/I1/I13/I1/2
+? Device does not cross-match.
+I /I7/I6/I2/2
+? Device does not cross-match.
+I /I5/I1/I11/I8/M5
+? Device does not cross-match.
+I /I7/I1/I13/I1/2
+? Device does not cross-match.
+I /I5/I1/I13/I1/2
+? Device does not cross-match.
+I /I6/I1/I13/I1/2
+? Device does not cross-match.
+I /I8/I1/I13/I1/0
+? Device does not cross-match.
+I /I8/I1/I13/I0/0
+? Device does not cross-match.
+I /I8/I10/I0/0
+? Device does not cross-match.
+I /I8/I8/I0/0
+? Device does not cross-match.
+I /I7/I1/I13/I1/0
+? Device does not cross-match.
+I /I7/I1/I13/I0/0
+? Device does not cross-match.
+I /I7/I10/I1/0
+? Device does not cross-match.
+I /I7/I10/I0/0
+? Device does not cross-match.
+I /I7/I8/I1/0
+? Device does not cross-match.
+I /I7/I8/I0/0
+? Device does not cross-match.
+I /I5/I1/I13/I1/0
+? Device does not cross-match.
+I /I5/I1/I13/I0/0
+? Device does not cross-match.
+I /I5/I10/I1/0
+? Device does not cross-match.
+I /I5/I10/I0/0
+? Device does not cross-match.
+I /I5/I8/I1/0
+? Device does not cross-match.
+I /I5/I8/I0/0
+? Device does not cross-match.
+I /I6/I1/I13/I1/0
+? Device does not cross-match.
+I /I6/I1/I13/I0/0
+? Device does not cross-match.
+I /I6/I10/I1/0
+? Device does not cross-match.
+I /I6/I10/I0/0
+? Device does not cross-match.
+I /I6/I8/I0/0
+? Device does not cross-match.
+I /I6/I8/I1/0
+? Device does not cross-match.
+
+netbad.out:
+N /I7/I1/net26
+? Net does not cross-match. It has 5 connections.
+N /I5/I1/I12/I9/net010
+? Net does not cross-match. It has 5 connections.
+N /I8/I1/net26
+? Net does not cross-match. It has 5 connections.
+N /I6/I1/net26
+? Net does not cross-match. It has 5 connections.
+N /I8/I1/I12/I9/net010
+? Net does not cross-match. It has 5 connections.
+N /I6/I1/I12/I9/net010
+? Net does not cross-match. It has 5 connections.
+N /I7/I1/I12/I9/net010
+? Net does not cross-match. It has 5 connections.
+N /I5/I1/net26
+? Net does not cross-match. It has 5 connections.
+N /vdd!
+? Net does not cross-match. It has 1968 connections.
+N /ALU_Function<0>
+? Net does not cross-match. It has 25 connections.
+N /p<0>
+? Net does not cross-match. It has 13 connections.
+N /gnd!
+? Net does not cross-match. It has 1740 connections.
+N /p<2>
+? Net does not cross-match. It has 13 connections.
+N /p<1>
+? Net does not cross-match. It has 13 connections.
+N /I8/I1/I13/net19
+? Net does not cross-match. It has 6 connections.
+N /I8/I6/I2/net17
+? Net does not cross-match. It has 2 connections.
+N /I7/I6/I2/net17
+? Net does not cross-match. It has 2 connections.
+N /p<3>
+? Net does not cross-match. It has 13 connections.
+N /I7/I1/I13/net19
+? Net does not cross-match. It has 6 connections.
+N /I5/I1/I13/net19
+? Net does not cross-match. It has 6 connections.
+N /I6/I1/I13/net19
+? Net does not cross-match. It has 6 connections.
+N /I5/I8/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /net65
+? Net does not cross-match. It has 12 connections.
+N /I8/I1/I13/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /net63
+? Net does not cross-match. It has 12 connections.
+N /I6/I8/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I8/I1/I13/net16
+? Net does not cross-match. It has 6 connections.
+N /I8/I1/I13/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /q0_out
+? Net does not cross-match. It has 11 connections.
+N /I7/I8/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I8/I10/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I8/I10/net16
+? Net does not cross-match. It has 6 connections.
+N /I8/I8/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /f<0>
+? Net does not cross-match. It has 12 connections.
+N /I8/I8/net16
+? Net does not cross-match. It has 6 connections.
+N /I8/I8/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /f<3>
+? Net does not cross-match. It has 12 connections.
+N /I5/I8/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I7/I1/I13/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /I6/I8/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /f<2>
+? Net does not cross-match. It has 14 connections.
+N /I7/I1/I13/net16
+? Net does not cross-match. It has 6 connections.
+N /I7/I1/I13/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I7/I8/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /f<1>
+? Net does not cross-match. It has 14 connections.
+N /I7/I10/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /ALU_Dest<3>
+? Net does not cross-match. It has 25 connections.
+N /I5/I1/I13/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I7/I10/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I7/I10/net16
+? Net does not cross-match. It has 6 connections.
+N /I6/I1/I13/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I7/I8/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /ALU_Dest<0>
+? Net does not cross-match. It has 25 connections.
+N /I7/I1/I13/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I7/I8/net16
+? Net does not cross-match. It has 6 connections.
+N /I7/I8/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I8/I1/I13/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I5/I1/I13/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /I6/I1/I13/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I5/I1/I13/net16
+? Net does not cross-match. It has 6 connections.
+N /I5/I1/I13/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I7/I1/I13/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I5/I10/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /I8/I1/I13/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I5/I10/net16
+? Net does not cross-match. It has 6 connections.
+N /I5/I10/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I5/I1/I13/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I5/I8/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /I5/I10/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I5/I8/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I5/I8/net16
+? Net does not cross-match. It has 6 connections.
+N /I6/I10/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I6/I1/I13/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /I7/I10/I1/net17
+? Net does not cross-match. It has 2 connections.
+N /I6/I1/I13/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I6/I1/I13/net16
+? Net does not cross-match. It has 6 connections.
+N /I8/I10/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I6/I10/I1/net14
+? Net does not cross-match. It has 2 connections.
+N /I5/I10/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I6/I10/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I6/I10/net16
+? Net does not cross-match. It has 6 connections.
+N /I7/I10/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I6/I8/I0/net14
+? Net does not cross-match. It has 2 connections.
+N /I6/I8/net16
+? Net does not cross-match. It has 6 connections.
+N /I6/I10/I0/net17
+? Net does not cross-match. It has 2 connections.
+N /I6/I8/I1/net14
+? Net does not cross-match. It has 2 connections.
+
+mergenet.out:
+
+termbad.out:
+T -1  ALU_Dest<0> /ALU_Dest<0>
+? Terminal ALU_Dest<0> in the schematic failed to match any terminal in the layout.
+T -1  ALU_Dest<3> /ALU_Dest<3>
+? Terminal ALU_Dest<3> in the schematic failed to match any terminal in the layout.
+T -1  ALU_Function<0> /ALU_Function<0>
+? Terminal ALU_Function<0> in the schematic failed to match any terminal in the layout.
+T -1  f<0> /f<0>
+? Terminal f<0> in the schematic failed to match any terminal in the layout.
+T -1  f<1> /f<1>
+? Terminal f<1> in the schematic failed to match any terminal in the layout.
+T -1  f<2> /f<2>
+? Terminal f<2> in the schematic failed to match any terminal in the layout.
+T -1  f<3> /f<3>
+? Terminal f<3> in the schematic failed to match any terminal in the layout.
+T -1  p<0> /p<0>
+? Terminal p<0> in the schematic failed to match any terminal in the layout.
+T -1  p<1> /p<1>
+? Terminal p<1> in the schematic failed to match any terminal in the layout.
+T -1  p<2> /p<2>
+? Terminal p<2> in the schematic failed to match any terminal in the layout.
+T -1  p<3> /p<3>
+? Terminal p<3> in the schematic failed to match any terminal in the layout.
+T -1  q0_out /q0_out
+? Terminal q0_out in the schematic failed to match any terminal in the layout.
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:
+
+
+Probe files from /home/jlee167/ece425.work/LVS/layout
+
+devbad.out:
+I /+883
+? Device does not cross-match.
+I /+1858
+? Device does not cross-match.
+I /+808
+? Device does not cross-match.
+I /+1862
+? Device does not cross-match.
+I /+1861
+? Device does not cross-match.
+I /+868
+? Device does not cross-match.
+I /+575
+? Device does not cross-match.
+I /+1863
+? Device does not cross-match.
+I /+870
+? Device does not cross-match.
+I /+866
+? Device does not cross-match.
+I /+864
+? Device does not cross-match.
+I /+974
+? Device does not cross-match.
+I /+972
+? Device does not cross-match.
+I /+970
+? Device does not cross-match.
+I /+951
+? Device does not cross-match.
+I /+949
+? Device does not cross-match.
+I /+947
+? Device does not cross-match.
+I /+945
+? Device does not cross-match.
+I /+886
+? Device does not cross-match.
+I /+884
+? Device does not cross-match.
+I /+882
+? Device does not cross-match.
+I /+880
+? Device does not cross-match.
+I /+846
+? Device does not cross-match.
+I /+844
+? Device does not cross-match.
+I /+842
+? Device does not cross-match.
+I /+840
+? Device does not cross-match.
+I /+38
+? Device does not cross-match.
+I /+36
+? Device does not cross-match.
+I /+34
+? Device does not cross-match.
+I /+14
+? Device does not cross-match.
+I /+12
+? Device does not cross-match.
+I /+8 
+? Device does not cross-match.
+I /+10
+? Device does not cross-match.
+
+netbad.out:
+N /541
+? Net does not cross-match. It has 1 connections.
+N /542
+? Net does not cross-match. It has 1 connections.
+N /539
+? Net does not cross-match. It has 1 connections.
+N /540
+? Net does not cross-match. It has 1 connections.
+N /550
+? Net does not cross-match. It has 3 connections.
+N /549
+? Net does not cross-match. It has 3 connections.
+N /547
+? Net does not cross-match. It has 3 connections.
+N /548
+? Net does not cross-match. It has 3 connections.
+N /77
+? Net does not cross-match. It has 1988 connections.
+N /ALU_Function<0>
+? Net does not cross-match. It has 25 connections.
+N /p<0>
+? Net does not cross-match. It has 15 connections.
+N /78
+? Net does not cross-match. It has 1736 connections.
+N /p<2>
+? Net does not cross-match. It has 15 connections.
+N /p<1>
+? Net does not cross-match. It has 15 connections.
+N /575
+? Net does not cross-match. It has 6 connections.
+N /748
+? Net does not cross-match. It has 2 connections.
+N /746
+? Net does not cross-match. It has 2 connections.
+N /p<3>
+? Net does not cross-match. It has 15 connections.
+N /577
+? Net does not cross-match. It has 6 connections.
+N /581
+? Net does not cross-match. It has 6 connections.
+N /579
+? Net does not cross-match. It has 6 connections.
+N /939
+? Net does not cross-match. It has 3 connections.
+N /672
+? Net does not cross-match. It has 13 connections.
+N /877
+? Net does not cross-match. It has 1 connections.
+N /671
+? Net does not cross-match. It has 13 connections.
+N /937
+? Net does not cross-match. It has 3 connections.
+N /559
+? Net does not cross-match. It has 5 connections.
+N /869
+? Net does not cross-match. It has 1 connections.
+N /q0_out
+? Net does not cross-match. It has 12 connections.
+N /935
+? Net does not cross-match. It has 3 connections.
+N /689
+? Net does not cross-match. It has 1 connections.
+N /79
+? Net does not cross-match. It has 5 connections.
+N /917
+? Net does not cross-match. It has 3 connections.
+N /f<0>
+? Net does not cross-match. It has 15 connections.
+N /603
+? Net does not cross-match. It has 5 connections.
+N /925
+? Net does not cross-match. It has 1 connections.
+N /f<3>
+? Net does not cross-match. It has 14 connections.
+N /923
+? Net does not cross-match. It has 3 connections.
+N /879
+? Net does not cross-match. It has 1 connections.
+N /921
+? Net does not cross-match. It has 3 connections.
+N /f<2>
+? Net does not cross-match. It has 17 connections.
+N /561
+? Net does not cross-match. It has 5 connections.
+N /871
+? Net does not cross-match. It has 1 connections.
+N /919
+? Net does not cross-match. It has 3 connections.
+N /f<1>
+? Net does not cross-match. It has 17 connections.
+N /707
+? Net does not cross-match. It has 1 connections.
+N /ALU_Dest<3>
+? Net does not cross-match. It has 22 connections.
+N /891
+? Net does not cross-match. It has 4 connections.
+N /691
+? Net does not cross-match. It has 1 connections.
+N /81
+? Net does not cross-match. It has 5 connections.
+N /889
+? Net does not cross-match. It has 4 connections.
+N /943
+? Net does not cross-match. It has 1 connections.
+N /ALU_Dest<0>
+? Net does not cross-match. It has 22 connections.
+N /887
+? Net does not cross-match. It has 4 connections.
+N /605
+? Net does not cross-match. It has 5 connections.
+N /927
+? Net does not cross-match. It has 1 connections.
+N /885
+? Net does not cross-match. It has 4 connections.
+N /883
+? Net does not cross-match. It has 1 connections.
+N /865
+? Net does not cross-match. It has 3 connections.
+N /565
+? Net does not cross-match. It has 5 connections.
+N /875
+? Net does not cross-match. It has 1 connections.
+N /863
+? Net does not cross-match. It has 3 connections.
+N /711
+? Net does not cross-match. It has 1 connections.
+N /861
+? Net does not cross-match. It has 3 connections.
+N /85
+? Net does not cross-match. It has 5 connections.
+N /695
+? Net does not cross-match. It has 1 connections.
+N /867
+? Net does not cross-match. It has 3 connections.
+N /947
+? Net does not cross-match. It has 1 connections.
+N /703
+? Net does not cross-match. It has 3 connections.
+N /931
+? Net does not cross-match. It has 1 connections.
+N /609
+? Net does not cross-match. It has 5 connections.
+N /701
+? Net does not cross-match. It has 3 connections.
+N /881
+? Net does not cross-match. It has 1 connections.
+N /699
+? Net does not cross-match. It has 3 connections.
+N /873
+? Net does not cross-match. It has 1 connections.
+N /563
+? Net does not cross-match. It has 5 connections.
+N /681
+? Net does not cross-match. It has 3 connections.
+N /709
+? Net does not cross-match. It has 1 connections.
+N /687
+? Net does not cross-match. It has 3 connections.
+N /693
+? Net does not cross-match. It has 1 connections.
+N /83
+? Net does not cross-match. It has 5 connections.
+N /683
+? Net does not cross-match. It has 3 connections.
+N /929
+? Net does not cross-match. It has 1 connections.
+N /607
+? Net does not cross-match. It has 5 connections.
+N /685
+? Net does not cross-match. It has 3 connections.
+N /945
+? Net does not cross-match. It has 1 connections.
+
+mergenet.out:
+
+termbad.out:
+T /+1880 D /547
+? Terminal "D" on device /+1880 should be connected to /77 instead of /547
+T /+1884 S /547
+? Terminal "S" on device /+1884 should be connected to /77 instead of /547
+T /+1864 S /539
+? Terminal "S" on device /+1864 should be connected to /77 instead of /539
+T /+1881 D /548
+? Terminal "D" on device /+1881 should be connected to /77 instead of /548
+T /+1885 S /548
+? Terminal "S" on device /+1885 should be connected to /77 instead of /548
+T /+1865 S /540
+? Terminal "S" on device /+1865 should be connected to /77 instead of /540
+T /+1883 D /550
+? Terminal "D" on device /+1883 should be connected to /77 instead of /550
+T /+1887 S /550
+? Terminal "S" on device /+1887 should be connected to /77 instead of /550
+T /+1867 S /542
+? Terminal "S" on device /+1867 should be connected to /77 instead of /542
+T /+1882 D /549
+? Terminal "D" on device /+1882 should be connected to /77 instead of /549
+T /+1886 S /549
+? Terminal "S" on device /+1886 should be connected to /77 instead of /549
+T /+1866 S /541
+? Terminal "S" on device /+1866 should be connected to /77 instead of /541
+T /+1941 G /549
+? Terminal "G" on device /+1941 should be connected to /77 instead of /549
+T /+787 G /522
+? Terminal "G" on device /+787 should be connected to /506 instead of /522
+T /+1851 G /522
+? Terminal "G" on device /+1851 should be connected to /506 instead of /522
+T /+788 G /506
+? Terminal "G" on device /+788 should be connected to /522 instead of /506
+T /+1844 G /506
+? Terminal "G" on device /+1844 should be connected to /522 instead of /506
+T /+794 D /541
+? Terminal "D" on device /+794 should be connected to /77 instead of /541
+T /+800 S /541
+? Terminal "S" on device /+800 should be connected to /77 instead of /541
+T /+1878 G /541
+? Terminal "G" on device /+1878 should be connected to /77 instead of /541
+T /+786 G /521
+? Terminal "G" on device /+786 should be connected to /505 instead of /521
+T /+1850 G /521
+? Terminal "G" on device /+1850 should be connected to /505 instead of /521
+T /+791 G /505
+? Terminal "G" on device /+791 should be connected to /521 instead of /505
+T /+1847 G /505
+? Terminal "G" on device /+1847 should be connected to /521 instead of /505
+T /+1937 G /547
+? Terminal "G" on device /+1937 should be connected to /77 instead of /547
+T /+792 D /539
+? Terminal "D" on device /+792 should be connected to /77 instead of /539
+T /+802 S /539
+? Terminal "S" on device /+802 should be connected to /77 instead of /539
+T /+1876 G /539
+? Terminal "G" on device /+1876 should be connected to /77 instead of /539
+T /+1939 G /548
+? Terminal "G" on device /+1939 should be connected to /77 instead of /548
+T /+784 G /519
+? Terminal "G" on device /+784 should be connected to /503 instead of /519
+T /+1848 G /519
+? Terminal "G" on device /+1848 should be connected to /503 instead of /519
+T /+789 G /503
+? Terminal "G" on device /+789 should be connected to /519 instead of /503
+T /+1845 G /503
+? Terminal "G" on device /+1845 should be connected to /519 instead of /503
+T /+793 D /540
+? Terminal "D" on device /+793 should be connected to /77 instead of /540
+T /+803 S /540
+? Terminal "S" on device /+803 should be connected to /77 instead of /540
+T /+1877 G /540
+? Terminal "G" on device /+1877 should be connected to /77 instead of /540
+T /+1943 G /550
+? Terminal "G" on device /+1943 should be connected to /77 instead of /550
+T /+785 G /520
+? Terminal "G" on device /+785 should be connected to /504 instead of /520
+T /+1849 G /520
+? Terminal "G" on device /+1849 should be connected to /504 instead of /520
+T /+790 G /504
+? Terminal "G" on device /+790 should be connected to /520 instead of /504
+T /+1846 G /504
+? Terminal "G" on device /+1846 should be connected to /520 instead of /504
+T /+795 D /542
+? Terminal "D" on device /+795 should be connected to /77 instead of /542
+T /+801 S /542
+? Terminal "S" on device /+801 should be connected to /77 instead of /542
+T /+1879 G /542
+? Terminal "G" on device /+1879 should be connected to /77 instead of /542
+T /+629 S /78
+? Terminal "S" on device /+629 should be connected to /468 instead of /78
+T /+32  S /78
+? Terminal "S" on device /+32 should be connected to /95 instead of /78
+T /+631 S /78
+? Terminal "S" on device /+631 should be connected to /470 instead of /78
+T /+633 S /78
+? Terminal "S" on device /+633 should be connected to /472 instead of /78
+T /+968 S /78
+? Terminal "S" on device /+968 should be connected to /619 instead of /78
+T /+635 S /78
+? Terminal "S" on device /+635 should be connected to /474 instead of /78
+T /+13  S /78
+? Terminal "S" on device /+13 should be connected to /94 instead of /78
+T /+950 S /78
+? Terminal "S" on device /+950 should be connected to /618 instead of /78
+T /+24  S /689
+? Terminal "S" on device /+24 should be connected to /681 instead of /689
+T /+24  G /79
+? Terminal "G" on device /+24 should be connected to /f<0> instead of /79
+T /+25  G /79
+? Terminal "G" on device /+25 should be connected to /f<1> instead of /79
+T /+26  S /691
+? Terminal "S" on device /+26 should be connected to /683 instead of /691
+T /+26  G /81
+? Terminal "G" on device /+26 should be connected to /f<1> instead of /81
+T /+27  G /81
+? Terminal "G" on device /+27 should be connected to /f<2> instead of /81
+T /+28  S /693
+? Terminal "S" on device /+28 should be connected to /685 instead of /693
+T /+28  G /83
+? Terminal "G" on device /+28 should be connected to /f<2> instead of /83
+T /+29  G /83
+? Terminal "G" on device /+29 should be connected to /f<3> instead of /83
+T /+30  S /695
+? Terminal "S" on device /+30 should be connected to /687 instead of /695
+T /+30  G /85
+? Terminal "G" on device /+30 should be connected to /f<3> instead of /85
+T /+51  G /ALU_Dest<3>
+? Terminal "G" on device /+51 should be connected to /78 instead of /ALU_Dest<3>
+T /+52  S /707
+? Terminal "S" on device /+52 should be connected to /699 instead of /707
+T /+52  G /ALU_Dest<3>
+? Terminal "G" on device /+52 should be connected to /f<0> instead of /ALU_Dest<3>
+T /+53  G /ALU_Dest<3>
+? Terminal "G" on device /+53 should be connected to /78 instead of /ALU_Dest<3>
+T /+54  S /709
+? Terminal "S" on device /+54 should be connected to /701 instead of /709
+T /+54  G /ALU_Dest<3>
+? Terminal "G" on device /+54 should be connected to /f<1> instead of /ALU_Dest<3>
+T /+55  G /ALU_Dest<3>
+? Terminal "G" on device /+55 should be connected to /78 instead of /ALU_Dest<3>
+T /+48  S /711
+? Terminal "S" on device /+48 should be connected to /703 instead of /711
+T /+48  G /ALU_Dest<3>
+? Terminal "G" on device /+48 should be connected to /f<2> instead of /ALU_Dest<3>
+T /+49  G /ALU_Dest<3>
+? Terminal "G" on device /+49 should be connected to /78 instead of /ALU_Dest<3>
+T /+560 S /78
+? Terminal "S" on device /+560 should be connected to /439 instead of /78
+T /+562 S /78
+? Terminal "S" on device /+562 should be connected to /441 instead of /78
+T /+556 S /78
+? Terminal "S" on device /+556 should be connected to /443 instead of /78
+T /+558 S /78
+? Terminal "S" on device /+558 should be connected to /445 instead of /78
+T /+573 G /431
+? Terminal "G" on device /+573 should be connected to /q0_out instead of /431
+T /+575 G /433
+? Terminal "G" on device /+575 should be connected to /671 instead of /433
+T /+577 G /435
+? Terminal "G" on device /+577 should be connected to /672 instead of /435
+T /+579 G /437
+? Terminal "G" on device /+579 should be connected to /q3_out instead of /437
+T /+596 G /ALU_Operand<0>
+? Terminal "G" on device /+596 should be connected to /399 instead of /ALU_Operand<0>
+T /+597 G /ALU_Operand<0>
+? Terminal "G" on device /+597 should be connected to /78 instead of /ALU_Operand<0>
+T /+598 G /ALU_Operand<0>
+? Terminal "G" on device /+598 should be connected to /400 instead of /ALU_Operand<0>
+T /+599 G /ALU_Operand<0>
+? Terminal "G" on device /+599 should be connected to /78 instead of /ALU_Operand<0>
+T /+600 G /ALU_Operand<0>
+? Terminal "G" on device /+600 should be connected to /401 instead of /ALU_Operand<0>
+T /+601 G /ALU_Operand<0>
+? Terminal "G" on device /+601 should be connected to /78 instead of /ALU_Operand<0>
+T /+602 G /ALU_Operand<0>
+? Terminal "G" on device /+602 should be connected to /402 instead of /ALU_Operand<0>
+T /+603 G /ALU_Operand<0>
+? Terminal "G" on device /+603 should be connected to /78 instead of /ALU_Operand<0>
+T /+648 G /459
+? Terminal "G" on device /+648 should be connected to /399 instead of /459
+T /+650 G /461
+? Terminal "G" on device /+650 should be connected to /400 instead of /461
+T /+644 G /463
+? Terminal "G" on device /+644 should be connected to /401 instead of /463
+T /+646 G /465
+? Terminal "G" on device /+646 should be connected to /402 instead of /465
+T /+674 G /ALU_Operand<2>
+? Terminal "G" on device /+674 should be connected to /78 instead of /ALU_Operand<2>
+T /+675 G /ALU_Operand<2>
+? Terminal "G" on device /+675 should be connected to /78 instead of /ALU_Operand<2>
+T /+668 G /ALU_Operand<2>
+? Terminal "G" on device /+668 should be connected to /78 instead of /ALU_Operand<2>
+T /+669 G /ALU_Operand<2>
+? Terminal "G" on device /+669 should be connected to /78 instead of /ALU_Operand<2>
+T /+670 G /ALU_Operand<2>
+? Terminal "G" on device /+670 should be connected to /78 instead of /ALU_Operand<2>
+T /+671 G /ALU_Operand<2>
+? Terminal "G" on device /+671 should be connected to /78 instead of /ALU_Operand<2>
+T /+672 G /ALU_Operand<2>
+? Terminal "G" on device /+672 should be connected to /78 instead of /ALU_Operand<2>
+T /+673 G /ALU_Operand<2>
+? Terminal "G" on device /+673 should be connected to /78 instead of /ALU_Operand<2>
+T /+843 S /78
+? Terminal "S" on device /+843 should be connected to /568 instead of /78
+T /+845 S /78
+? Terminal "S" on device /+845 should be connected to /570 instead of /78
+T /+847 S /78
+? Terminal "S" on device /+847 should be connected to /572 instead of /78
+T /+841 S /78
+? Terminal "S" on device /+841 should be connected to /574 instead of /78
+T /+868 S /78
+? Terminal "S" on device /+868 should be connected to /885 instead of /78
+T /+868 D /877
+? Terminal "D" on device /+868 should be connected to /885 instead of /877
+T /+870 S /78
+? Terminal "S" on device /+870 should be connected to /887 instead of /78
+T /+870 D /879
+? Terminal "D" on device /+870 should be connected to /887 instead of /879
+T /+864 S /78
+? Terminal "S" on device /+864 should be connected to /889 instead of /78
+T /+864 D /881
+? Terminal "D" on device /+864 should be connected to /889 instead of /881
+T /+866 S /78
+? Terminal "S" on device /+866 should be connected to /891 instead of /78
+T /+866 D /883
+? Terminal "D" on device /+866 should be connected to /891 instead of /883
+T /+863 S /869
+? Terminal "S" on device /+863 should be connected to /861 instead of /869
+T /+863 G /559
+? Terminal "G" on device /+863 should be connected to /p<0> instead of /559
+T /+857 S /871
+? Terminal "S" on device /+857 should be connected to /863 instead of /871
+T /+857 G /561
+? Terminal "G" on device /+857 should be connected to /p<1> instead of /561
+T /+859 S /873
+? Terminal "S" on device /+859 should be connected to /865 instead of /873
+T /+859 G /563
+? Terminal "G" on device /+859 should be connected to /p<2> instead of /563
+T /+861 S /875
+? Terminal "S" on device /+861 should be connected to /867 instead of /875
+T /+861 G /565
+? Terminal "G" on device /+861 should be connected to /p<3> instead of /565
+T /+961 S /925
+? Terminal "S" on device /+961 should be connected to /917 instead of /925
+T /+961 G /603
+? Terminal "G" on device /+961 should be connected to /f<0> instead of /603
+T /+962 G /603
+? Terminal "G" on device /+962 should be connected to /671 instead of /603
+T /+963 S /927
+? Terminal "S" on device /+963 should be connected to /919 instead of /927
+T /+963 G /605
+? Terminal "G" on device /+963 should be connected to /f<1> instead of /605
+T /+964 G /605
+? Terminal "G" on device /+964 should be connected to /672 instead of /605
+T /+965 S /929
+? Terminal "S" on device /+965 should be connected to /921 instead of /929
+T /+965 G /607
+? Terminal "G" on device /+965 should be connected to /f<2> instead of /607
+T /+966 G /607
+? Terminal "G" on device /+966 should be connected to /q3_out instead of /607
+T /+967 S /931
+? Terminal "S" on device /+967 should be connected to /923 instead of /931
+T /+967 G /609
+? Terminal "G" on device /+967 should be connected to /f<3> instead of /609
+T /+988 G /ALU_Dest<0>
+? Terminal "G" on device /+988 should be connected to /78 instead of /ALU_Dest<0>
+T /+989 S /943
+? Terminal "S" on device /+989 should be connected to /935 instead of /943
+T /+989 G /ALU_Dest<0>
+? Terminal "G" on device /+989 should be connected to /q0_out instead of /ALU_Dest<0>
+T /+990 G /ALU_Dest<0>
+? Terminal "G" on device /+990 should be connected to /78 instead of /ALU_Dest<0>
+T /+991 S /945
+? Terminal "S" on device /+991 should be connected to /937 instead of /945
+T /+991 G /ALU_Dest<0>
+? Terminal "G" on device /+991 should be connected to /671 instead of /ALU_Dest<0>
+T /+984 G /ALU_Dest<0>
+? Terminal "G" on device /+984 should be connected to /78 instead of /ALU_Dest<0>
+T /+985 S /947
+? Terminal "S" on device /+985 should be connected to /939 instead of /947
+T /+985 G /ALU_Dest<0>
+? Terminal "G" on device /+985 should be connected to /672 instead of /ALU_Dest<0>
+T /+986 G /ALU_Dest<0>
+? Terminal "G" on device /+986 should be connected to /78 instead of /ALU_Dest<0>
+T /+50  D /95
+? Terminal "D" on device /+50 should be connected to /78 instead of /95
+T /+572 D /439
+? Terminal "D" on device /+572 should be connected to /78 instead of /439
+T /+578 D /445
+? Terminal "D" on device /+578 should be connected to /78 instead of /445
+T /+586 G /399
+? Terminal "G" on device /+586 should be connected to /ALU_Operand<0> instead of /399
+T /+584 G /402
+? Terminal "G" on device /+584 should be connected to /ALU_Operand<0> instead of /402
+T /+987 D /619
+? Terminal "D" on device /+987 should be connected to /78 instead of /619
+T /+15  G /f<1>
+? Terminal "G" on device /+15 should be connected to /79 instead of /f<1>
+T /+9   G /f<2>
+? Terminal "G" on device /+9  should be connected to /81 instead of /f<2>
+T /+11  G /f<3>
+? Terminal "G" on device /+11 should be connected to /83 instead of /f<3>
+T /+31  D /94
+? Terminal "D" on device /+31 should be connected to /78 instead of /94
+T /+33  G /78
+? Terminal "G" on device /+33 should be connected to /ALU_Dest<3> instead of /78
+T /+35  G /78
+? Terminal "G" on device /+35 should be connected to /ALU_Dest<3> instead of /78
+T /+37  G /78
+? Terminal "G" on device /+37 should be connected to /ALU_Dest<3> instead of /78
+T /+39  G /78
+? Terminal "G" on device /+39 should be connected to /ALU_Dest<3> instead of /78
+T /+561 G /q0_out
+? Terminal "G" on device /+561 should be connected to /433 instead of /q0_out
+T /+563 G /671
+? Terminal "G" on device /+563 should be connected to /431 instead of /671
+T /+557 G /672
+? Terminal "G" on device /+557 should be connected to /435 instead of /672
+T /+559 G /q3_out
+? Terminal "G" on device /+559 should be connected to /437 instead of /q3_out
+T /+574 D /441
+? Terminal "D" on device /+574 should be connected to /78 instead of /441
+T /+576 D /443
+? Terminal "D" on device /+576 should be connected to /78 instead of /443
+T /+587 G /78
+? Terminal "G" on device /+587 should be connected to /ALU_Operand<0> instead of /78
+T /+580 G /400
+? Terminal "G" on device /+580 should be connected to /ALU_Operand<0> instead of /400
+T /+581 G /78
+? Terminal "G" on device /+581 should be connected to /ALU_Operand<0> instead of /78
+T /+582 G /401
+? Terminal "G" on device /+582 should be connected to /ALU_Operand<0> instead of /401
+T /+583 G /78
+? Terminal "G" on device /+583 should be connected to /ALU_Operand<0> instead of /78
+T /+585 G /78
+? Terminal "G" on device /+585 should be connected to /ALU_Operand<0> instead of /78
+T /+628 G /399
+? Terminal "G" on device /+628 should be connected to /459 instead of /399
+T /+630 G /400
+? Terminal "G" on device /+630 should be connected to /461 instead of /400
+T /+632 G /401
+? Terminal "G" on device /+632 should be connected to /463 instead of /401
+T /+634 G /402
+? Terminal "G" on device /+634 should be connected to /465 instead of /402
+T /+649 D /468
+? Terminal "D" on device /+649 should be connected to /78 instead of /468
+T /+651 D /470
+? Terminal "D" on device /+651 should be connected to /78 instead of /470
+T /+645 D /472
+? Terminal "D" on device /+645 should be connected to /78 instead of /472
+T /+647 D /474
+? Terminal "D" on device /+647 should be connected to /78 instead of /474
+T /+653 G /78
+? Terminal "G" on device /+653 should be connected to /ALU_Operand<2> instead of /78
+T /+654 G /78
+? Terminal "G" on device /+654 should be connected to /ALU_Operand<2> instead of /78
+T /+655 G /78
+? Terminal "G" on device /+655 should be connected to /ALU_Operand<2> instead of /78
+T /+656 G /78
+? Terminal "G" on device /+656 should be connected to /ALU_Operand<2> instead of /78
+T /+657 G /78
+? Terminal "G" on device /+657 should be connected to /ALU_Operand<2> instead of /78
+T /+658 G /78
+? Terminal "G" on device /+658 should be connected to /ALU_Operand<2> instead of /78
+T /+659 G /78
+? Terminal "G" on device /+659 should be connected to /ALU_Operand<2> instead of /78
+T /+652 G /78
+? Terminal "G" on device /+652 should be connected to /ALU_Operand<2> instead of /78
+T /+856 D /568
+? Terminal "D" on device /+856 should be connected to /78 instead of /568
+T /+858 D /570
+? Terminal "D" on device /+858 should be connected to /78 instead of /570
+T /+860 D /572
+? Terminal "D" on device /+860 should be connected to /78 instead of /572
+T /+862 D /574
+? Terminal "D" on device /+862 should be connected to /78 instead of /574
+T /+944 G /671
+? Terminal "G" on device /+944 should be connected to /603 instead of /671
+T /+946 G /672
+? Terminal "G" on device /+946 should be connected to /605 instead of /672
+T /+948 G /q3_out
+? Terminal "G" on device /+948 should be connected to /607 instead of /q3_out
+T /+960 D /618
+? Terminal "D" on device /+960 should be connected to /78 instead of /618
+T /+969 G /78
+? Terminal "G" on device /+969 should be connected to /ALU_Dest<0> instead of /78
+T /+971 G /78
+? Terminal "G" on device /+971 should be connected to /ALU_Dest<0> instead of /78
+T /+973 G /78
+? Terminal "G" on device /+973 should be connected to /ALU_Dest<0> instead of /78
+T /+975 G /78
+? Terminal "G" on device /+975 should be connected to /ALU_Dest<0> instead of /78
+T -1  ALU_Dest<0> /ALU_Dest<0>
+? Terminal ALU_Dest<0> in the layout failed to match any terminal in the schematic.
+T -1  ALU_Dest<3> /ALU_Dest<3>
+? Terminal ALU_Dest<3> in the layout failed to match any terminal in the schematic.
+T -1  ALU_Function<0> /ALU_Function<0>
+? Terminal ALU_Function<0> in the layout failed to match any terminal in the schematic.
+T -1  f<0> /f<0>
+? Terminal f<0> in the layout failed to match any terminal in the schematic.
+T -1  f<1> /f<1>
+? Terminal f<1> in the layout failed to match any terminal in the schematic.
+T -1  f<2> /f<2>
+? Terminal f<2> in the layout failed to match any terminal in the schematic.
+T -1  f<3> /f<3>
+? Terminal f<3> in the layout failed to match any terminal in the schematic.
+T -1  p<0> /p<0>
+? Terminal p<0> in the layout failed to match any terminal in the schematic.
+T -1  p<1> /p<1>
+? Terminal p<1> in the layout failed to match any terminal in the schematic.
+T -1  p<2> /p<2>
+? Terminal p<2> in the layout failed to match any terminal in the schematic.
+T -1  p<3> /p<3>
+? Terminal p<3> in the layout failed to match any terminal in the schematic.
+T -1  q0_out /q0_out
+? Terminal q0_out in the layout failed to match any terminal in the schematic.
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:

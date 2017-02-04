@@ -1,0 +1,27 @@
+// Library - ece425mp2, Cell - logic, View - schematic
+// LAST TIME SAVED: Nov 25 16:50:15 2016
+// NETLIST TIME: Nov 26 23:21:27 2016
+`timescale 1ns / 1ns 
+
+module logic ( nand_, nor_, xor_, inv_r, inv_s, r, s );
+
+output  nand_, nor_, xor_;
+
+input  inv_r, inv_s, r, s;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "logic";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+inv I9 ( net07, r);
+inv I10 ( net09, s);
+nand2 I4 ( nand_, net018, net06);
+nor2 I5 ( nor_, net018, net06);
+xor2 I8 ( xor_, net018, net06);
+mux_2to1 I6 ( net018, r, net07, inv_r);
+mux_2to1 I7 ( net06, s, net09, inv_s);
+
+endmodule

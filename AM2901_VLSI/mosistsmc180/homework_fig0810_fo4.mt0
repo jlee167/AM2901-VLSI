@@ -1,0 +1,6 @@
+$DATA1 SOURCE='HSPICE' VERSION='I-2013.12-1 64-BIT'
+.TITLE '* hw2_fo6.sp'
+ tpdr             tpdf             tpd              trise             
+ tfall            temper           alter#            
+    failed           failed           failed           failed         
+    failed          70.0000        1                 

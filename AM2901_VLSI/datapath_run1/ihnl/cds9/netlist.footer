@@ -1,0 +1,10 @@
+tx_gate I17 ( net015, net017, net10, cp);
+tx_gate I18 ( net13, net010, cp, net10);
+bitcell I3 ( Q, net13);
+bitcell I2 ( net016, net017);
+inv I13 ( net015, net012);
+inv I6 ( net10, cp);
+inv I4 ( net010, net016);
+mux_2to1 I15 ( net012, Q, D, en);
+
+endmodule

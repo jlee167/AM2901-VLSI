@@ -1,0 +1,29 @@
+// Library - ece425mp2, Cell - mux_4to1, View - schematic
+// LAST TIME SAVED: Nov 15 20:45:29 2016
+// NETLIST TIME: Nov 15 20:46:40 2016
+`timescale 1ns / 1ns 
+
+module mux_4to1 ( Out, In0, In1, In2, In3, S[1], S[0] );
+
+output  Out;
+
+input  In0, In1, In2, In3;
+
+input [0:1]  S;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "mux_4to1";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+nand3 I8 ( net014, In3, S[1], S[0]);
+nand3 I2 ( net17, In2, S[1], net16);
+nand3 I1 ( net19, In1, net15, S[0]);
+nand3 I0 ( net18, In0, net15, net16);
+inv I6 ( net15, S[1]);
+inv I7 ( net16, S[0]);
+nand4 I9 ( Out, net18, net19, net17, net014);
+
+endmodule

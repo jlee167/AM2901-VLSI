@@ -1,0 +1,32 @@
+// Library - ece425mp2, Cell - datapath, View - schematic
+// LAST TIME SAVED: Nov 26 23:45:58 2016
+// NETLIST TIME: Nov 26 23:46:09 2016
+`timescale 1ns / 1ns 
+
+module datapath ( c, f, p, q0_out, q3_out, y, ALU_Dest, ALU_Function,
+     ALU_Operand, cin, cp, d, f0_in, f3_in, q0_in, q3_in, reg_wr,
+     select_a_hi, select_b_hi );
+
+output  q0_out, q3_out;
+
+input  cin, cp, f0_in, f3_in, q0_in, q3_in, reg_wr;
+
+output [3:0]  c;
+output [3:0]  f;
+output [3:0]  p;
+output [3:0]  y;
+
+input [5:0]  ALU_Dest;
+input [15:0]  select_b_hi;
+input [3:0]  ALU_Operand;
+input [15:0]  select_a_hi;
+input [4:0]  ALU_Function;
+input [3:0]  d;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425mp2";
+    specparam CDS_CELLNAME = "datapath";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

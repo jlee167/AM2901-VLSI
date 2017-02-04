@@ -1,0 +1,51 @@
+
+reg [2:0] i;
+
+always begin
+	#50 i = i + 1;
+end
+
+always @ (i) 
+begin
+	if (i == 3'b000)
+		select_b_hi = 16'd0;
+	else if (i == 3'd1)
+	begin
+		data_write = 1;
+		write_en = 1;
+		select_b_hi = 16'd1;
+		select_a_hi = 16'd2;
+	end
+	else if (i == 3'd2)
+	begin
+		write_en = 0;
+		select_b_hi = 16'd1;
+		select_a_hi = 16'd4;
+	end
+	else if (i == 3'd3)
+	begin
+		write_en = 0;
+		select_b_hi = 16'd2;
+		select_a_hi = 16'd8;
+	end
+	else if (i == 3'd4)
+	begin
+		write_en = 0;
+		select_b_hi = 16'd4;
+		select_a_hi = 16'd1;
+	end
+	else if (i == 3'd6)
+	begin
+		write_en = 0;
+		select_b_hi = 16'd1;
+		select_a_hi = 16'd1;
+	end
+
+	cp = i[0];
+
+end
+
+initial begin
+	i = 3'b000;
+	#(50*16) $finish;
+end

@@ -1,0 +1,64 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; Tutorial .cdsinit file 
+; By:       Cris Reeser/Diane Goldberg 
+; Created:  October 10, 1995 
+;               
+; This initialization file contains the settings necessary to
+; successfully run the Cell Design tutorial. Some of these may
+; be redundant, if your site uses a site initialization file.
+; For further information on initialization files, read the
+; comments in the <install_dir>/samples/local/cdsinit file.
+; 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; Human Interface Environment Settings
+;
+;
+  hiiSetFont("text" "-adobe-courier-bold-r-*-*-12-*")
+  hiSetFormPosition(603:500)
+  hinestLimit = 5 
+  hiSetUndoLimit(10)
+  hiExpertMode(nil)
+  window(1)->useScrollbars = t
+  window(1)->backingStore = t 
+  envSetVal("layout" "xSnapSpacing" 'float 0.5) 
+  envSetVal("layout" "ySnapSpacing" 'float 0.5) 
+  envSetVal("layout" "segSnapMode" 'string "anyAngle") 
+  envSetVal("layout" "stopLevel" 'int 20) 
+  envLoadFile("./.cdsenv")
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; Bindkey Settings
+;
+ load(prependInstallPath("samples/local/schBindKeys.il"))
+ load(prependInstallPath("samples/local/leBindKeys.il"))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; RESIZE CIW
+; CIW
+; Note, hiFlush() is used as a workaround to display problem with
+; resizing windows in SKILL.
+  hiFlush()
+  hiResizeWindow(window(1) list(3:3 750:200))
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;  Tutorial Customization
+;
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+setSkillPath(". techFiles")
+
+
+; Welcome the user
+ fprintf(poport "************************************************\n")
+ fprintf(poport "Welcome to the Cell Design Tutorial... %s\n" getShellEnvVar("USER"))
+printf( "    \n" )
+printf( "Done with initialization.\n" )
+printf("************************************************\n")
+printf( "    \n" )
+printf( "    \n" )
+

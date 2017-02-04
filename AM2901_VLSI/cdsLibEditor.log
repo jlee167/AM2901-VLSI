@@ -1,0 +1,44 @@
+\o Program:		@(#)$CDS: cdsLibEditor version 6.1.7 - CAT35 05/21/2016 02:35 (sjfnl027) $
+\o Sub version:		sub-version  IC6.1.7 - CAT35.15s020 
+\o Arguments:		-display :0 -mpssession virtuoso10707 -mpshost eceb-2022-23.ews.illinois.edu -namespace CDBA -cdslib /home/jlee167/AM2901_VLSI/cds.lib 
+\o Working Directory:	eceb-2022-23.ews.illinois.edu:/home/jlee167/AM2901_VLSI
+\o 64-bit offsets
+\a nrSetWindowVisibility(cdsLibEditor "show")
+\o Qt version: 		4.8.5
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 0 0)
+\o Active cell: 0 0 "mp_personal"
+\a nrResizeWindow(cdsLibEditor list(7 80 500 400))
+\a nrListItemAction(cdsLibEditor->mainTable 11 1)
+\o Active cell: 11 1 "/home/jlee167/ece425.work/ece425mp1"
+\a nrListItemRename(cdsLibEditor->mainTable, 11 1 "ece425mp1")
+\a nrListItemAction(cdsLibEditor->mainTable 12 0)
+\o Active cell: 12 0 "ece425mp2"
+\a nrListItemAction(cdsLibEditor->mainTable 12 1)
+\o Active cell: 12 1 "/home/jlee167/ece425.work/ece425mp2"
+\a nrListItemRename(cdsLibEditor->mainTable, 12 1 "ece425mp2")
+\a nrListItemAction(cdsLibEditor->mainTable 13 1)
+\o Active cell: 13 1 "ece425mp3"
+\a nrListItemAction(cdsLibEditor->mainTable 15 1)
+\o Active cell: 15 1 ""
+\a nrListItemAction(cdsLibEditor->mainTable 0 0)
+\o Active cell: 0 0 "mp_personal"
+\a nrListItemAction(cdsLibEditor->mainTable 1 0)
+\o Active cell: 1 0 "NCSU_Analog_Parts"
+\a nrListItemAction(cdsLibEditor->mainTable 0 0)
+\o Active cell: 0 0 "mp_personal"
+\a cdsLibEditor->editDeletePopupButton->value = t
+\a nrListItemAction(cdsLibEditor->mainTable 0 1)
+\o Active cell: 0 1 "/home/jlee167/ece425.work/mp_personal"
+\a nrListItemAction(cdsLibEditor->mainTable 1 1)
+\o Active cell: 1 1 "$CDK_DIR/lib/NCSU_Analog_Parts"
+\a nrListItemAction(cdsLibEditor->mainTable 8 1)
+\o Active cell: 8 1 "$CDK_DIR/lib/NCSU_TechLib_tsmc03d"
+\a cdsLibEditor->fileExitButton->value = t
+\o QUESTION (CLE-205): You have made changes which have not been saved. \n\nWould you like to save your changes? 
+\a nrSetWindowVisibility(needSaveDialog "show")
+\a nrResizeWindow(needSaveDialog list(73 197 369 133))
+\a nrSetCurrentWindow(needSaveDialog)
+\a needSaveDialog->yesButton->value = t
+\a nrSetWindowVisibility(cdsLibEditor "hide")
+\a exit(0)

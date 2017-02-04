@@ -1,0 +1,9 @@
+inv I9 ( net07, r);
+inv I10 ( net09, s);
+nand2 I4 ( nand_, net018, net06);
+nor2 I5 ( nor_, net018, net06);
+xor2 I8 ( xor_, net018, net06);
+mux_2to1 I6 ( net018, r, net07, inv_r);
+mux_2to1 I7 ( net06, s, net09, inv_s);
+
+endmodule

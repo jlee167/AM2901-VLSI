@@ -1,0 +1,621 @@
+VERSION 5.7 ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+
+DESIGN datapath ;
+
+UNITS DISTANCE MICRONS 1000 ;
+PROPERTYDEFINITIONS
+  DESIGN connectivityLastUpdated INTEGER 12377 ;
+  DESIGN drcSignature INTEGER 146088326 ;
+END PROPERTYDEFINITIONS
+
+DIEAREA ( -25080 102000 ) ( 548460 132240 ) ;
+
+COMPONENTS 64 ;
+- I18 M3_M2 ;
+- I22 M3_M2 ;
+- I15 M3_M2 ;
+- I17 M3_M2 ;
+- I16 M3_M2 ;
+- I24 M3_M2 ;
+- I20 M3_M2 ;
+- I19 M3_M2 ;
+- I21 M3_M2 ;
+- I40 M3_M2 ;
+- I36 M3_M2 ;
+- I25 M2_M1 ;
+- I14 M3_M2 ;
+- I13 M3_M2 ;
+- I12 M3_M2 ;
+- I8 M2_M1 ;
+- I33 M3_M2 ;
+- I7 M2_M1 ;
+- I32 M3_M2 ;
+- I29 M3_M2 ;
+- I6 M3_M2 ;
+- I50 M3_M2 ;
+- I11 M2_M1 ;
+- I45 M3_M2 ;
+- I44 M3_M2 ;
+- I9 M3_M2 ;
+- I10 M2_M1 ;
+- I5 M3_M2 ;
+- I42 M3_M2 ;
+- I30 M3_M2 ;
+- I3 bitslice ;
+- I27 M3_M2 ;
+- I31 M3_M2 ;
+- I4 M2_M1 ;
+- I2 bitslice ;
+- M36 M2_M1
+  + SOURCE DIST ;
+- I0 bitslice ;
+- I1 bitslice ;
+- I35 M3_M2 ;
+- I34 M3_M2 ;
+- I46 M3_M2 ;
+- I41 M3_M2 ;
+- I26 M3_M2 ;
+- I49 M3_M2 ;
+- I39 M3_M2 ;
+- I28 M3_M2 ;
+- I43 M3_M2 ;
+- I23 M3_M2 ;
+- I48 M3_M2 ;
+- I37 M3_M2 ;
+- I38 M3_M2 ;
+- I47 M3_M2 ;
+- I51 M3_M2 ;
+- I52 M3_M2 ;
+- I53 M3_M2 ;
+- I54 M3_M2 ;
+- I55 M3_M2 ;
+- I56 M3_M2 ;
+- I57 M3_M2 ;
+- I58 M3_M2 ;
+- I59 M3_M2 ;
+- I60 M2_M1 ;
+- I61 M3_M2 ;
+- I62 M3_M2 ;
+END COMPONENTS
+
+PINS 76 ;
+- p[3] + NET p[3]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 660 600 )
+    + PLACED ( 543120 101460 ) N ;
+- y[3] + NET y[3]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 660 600 )
+    + PLACED ( 544560 101460 ) N ;
+- ALU_Dest[4] + NET ALU_Dest[4]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 540 )
+    + PLACED ( -2220 101640 ) N ;
+- ALU_Dest[3] + NET ALU_Dest[3]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 600 )
+    + PLACED ( 540 101580 ) N ;
+- reg_wr + NET reg_wr
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 540 600 )
+    + PLACED ( 28320 101520 ) N ;
+- y[0] + NET y[0]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 660 600 )
+    + PLACED ( 522660 101520 ) N ;
+- ALU_Operand[1] + NET ALU_Operand[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 600 )
+    + PLACED ( 309300 101460 ) N ;
+- ALU_Operand[0] + NET ALU_Operand[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 540 )
+    + PLACED ( 310200 101520 ) N ;
+- d[0] + NET d[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 600 600 )
+    + PLACED ( -14940 101580 ) N ;
+- ALU_Operand[3] + NET ALU_Operand[3]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 780 )
+    + PLACED ( 333180 101400 ) N ;
+- ALU_Operand[2] + NET ALU_Operand[2]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 780 )
+    + PLACED ( 335100 101280 ) N ;
+- ALU_Function[4] + NET ALU_Function[4]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1260 )
+    + PLACED ( 378480 100860 ) N ;
+- ALU_Function[3] + NET ALU_Function[3]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 366540 101040 ) N ;
+- ALU_Function[1] + NET ALU_Function[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 660 1440 )
+    + PLACED ( 417480 101340 ) N ;
+- ALU_Function[0] + NET ALU_Function[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 540 1440 )
+    + PLACED ( 418860 101280 ) N ;
+- cin + NET cin
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 540 1200 )
+    + PLACED ( 402420 101760 ) N ;
+- p[0] + NET p[0]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 660 600 )
+    + PLACED ( 521520 101520 ) N ;
+- q0_in + NET q0_in
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 540 540 )
+    + PLACED ( 458100 102120 ) N ;
+- ALU_Function[2] + NET ALU_Function[2]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 600 660 )
+    + PLACED ( 446340 102060 ) N ;
+- f[3] + NET f[3]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 720 660 )
+    + PLACED ( 540240 101460 ) N ;
+- ALU_Dest[1] + NET ALU_Dest[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 420 720 )
+    + PLACED ( 456360 101940 ) N ;
+- ALU_Dest[0] + NET ALU_Dest[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 660 )
+    + PLACED ( 459180 102000 ) N ;
+- f3_in + NET f3_in
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 540 540 )
+    + PLACED ( -22920 101760 ) N ;
+- f0_in + NET f0_in
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 600 600 )
+    + PLACED ( -16320 101640 ) N ;
+- ALU_Dest[2] + NET ALU_Dest[2]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 420 1320 )
+    + PLACED ( 483840 101100 ) N ;
+- c[2] + NET c[2]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 720 660 )
+    + PLACED ( 533040 101460 ) N ;
+- ALU_Dest[5] + NET ALU_Dest[5]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 480 )
+    + PLACED ( 300000 101580 ) N ;
+- cp + NET cp
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 720 660 )
+    + PLACED ( 272880 101460 ) N ;
+- select_a_hi[7] + NET select_a_hi[7]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 154080 101220 ) N ;
+- select_a_hi[8] + NET select_a_hi[8]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 139200 101220 ) N ;
+- select_b_hi[8] + NET select_b_hi[8]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 140640 101220 ) N ;
+- select_a_hi[9] + NET select_a_hi[9]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 124320 101220 ) N ;
+- select_b_hi[10] + NET select_b_hi[10]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 110880 101220 ) N ;
+- select_a_hi[10] + NET select_a_hi[10]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 109440 101220 ) N ;
+- select_b_hi[1] + NET select_b_hi[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 244980 100980 ) N ;
+- select_a_hi[1] + NET select_a_hi[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 243660 100980 ) N ;
+- select_b_hi[5] + NET select_b_hi[5]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 185280 101220 ) N ;
+- select_a_hi[3] + NET select_a_hi[3]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 213960 101220 ) N ;
+- select_a_hi[5] + NET select_a_hi[5]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 184080 101220 ) N ;
+- select_b_hi[7] + NET select_b_hi[7]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 155580 101220 ) N ;
+- select_b_hi[11] + NET select_b_hi[11]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 96000 101220 ) N ;
+- select_a_hi[11] + NET select_a_hi[11]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 94560 101220 ) N ;
+- select_b_hi[12] + NET select_b_hi[12]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 81180 101220 ) N ;
+- select_a_hi[12] + NET select_a_hi[12]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 79740 101220 ) N ;
+- select_b_hi[14] + NET select_b_hi[14]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 51480 101220 ) N ;
+- select_b_hi[3] + NET select_b_hi[3]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 215280 101220 ) N ;
+- select_b_hi[2] + NET select_b_hi[2]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 230100 101220 ) N ;
+- select_a_hi[13] + NET select_a_hi[13]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 64860 101220 ) N ;
+- select_b_hi[13] + NET select_b_hi[13]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 66300 101220 ) N ;
+- select_a_hi[6] + NET select_a_hi[6]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 168960 101220 ) N ;
+- select_b_hi[6] + NET select_b_hi[6]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 170340 101220 ) N ;
+- select_a_hi[4] + NET select_a_hi[4]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 198720 101220 ) N ;
+- select_b_hi[4] + NET select_b_hi[4]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 200160 101220 ) N ;
+- select_a_hi[2] + NET select_a_hi[2]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 228540 101220 ) N ;
+- select_a_hi[0] + NET select_a_hi[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 258300 101040 ) N ;
+- select_a_hi[14] + NET select_a_hi[14]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 50100 101220 ) N ;
+- select_b_hi[9] + NET select_b_hi[9]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 125760 101220 ) N ;
+- select_b_hi[0] + NET select_b_hi[0]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 259800 100980 ) N ;
+- select_a_hi[15] + NET select_a_hi[15]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 35220 101220 ) N ;
+- select_b_hi[15] + NET select_b_hi[15]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 360 1020 )
+    + PLACED ( 36660 101220 ) N ;
+- f[0] + NET f[0]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 720 660 )
+    + PLACED ( 518940 101580 ) N ;
+- c[0] + NET c[0]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 660 600 )
+    + PLACED ( 520260 101520 ) N ;
+- y[1] + NET y[1]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 660 600 )
+    + PLACED ( 529620 101520 ) N ;
+- p[1] + NET p[1]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 660 600 )
+    + PLACED ( 528120 101520 ) N ;
+- f[1] + NET f[1]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 720 660 )
+    + PLACED ( 524820 101460 ) N ;
+- f[2] + NET f[2]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 720 660 )
+    + PLACED ( 531540 101460 ) N ;
+- c[1] + NET c[1]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 720 660 )
+    + PLACED ( 526440 101460 ) N ;
+- p[2] + NET p[2]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 660 600 )
+    + PLACED ( 534600 101520 ) N ;
+- y[2] + NET y[2]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 660 600 )
+    + PLACED ( 536040 101520 ) N ;
+- q3_out + NET q3_out
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 780 720 )
+    + PLACED ( 538800 101400 ) N ;
+- q0_out + NET q0_out
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 720 660 )
+    + PLACED ( 517200 101580 ) N ;
+- d[1] + NET d[1]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 600 600 )
+    + PLACED ( -18060 101580 ) N ;
+- d[2] + NET d[2]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 600 600 )
+    + PLACED ( -19560 101700 ) N ;
+- d[3] + NET d[3]
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 600 600 )
+    + PLACED ( -21660 101700 ) N ;
+- c[3] + NET c[3]
+  + DIRECTION OUTPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 720 660 )
+    + PLACED ( 541620 101400 ) N ;
+- q3_in + NET q3_in
+  + DIRECTION INPUT
+  + PORT
+    + LAYER metal3 ( 0 0 ) ( 420 960 )
+    + PLACED ( 488760 101460 ) N ;
+END PINS
+
+NETS 76 ;
+- p[3]
+  ( PIN p[3] ) ;
+- y[3]
+  ( PIN y[3] ) ;
+- ALU_Dest[4]
+  ( PIN ALU_Dest[4] ) ;
+- ALU_Dest[3]
+  ( PIN ALU_Dest[3] ) ;
+- reg_wr
+  ( PIN reg_wr ) ;
+- y[0]
+  ( PIN y[0] ) ;
+- ALU_Operand[1]
+  ( PIN ALU_Operand[1] ) ;
+- ALU_Operand[0]
+  ( PIN ALU_Operand[0] ) ;
+- d[0]
+  ( PIN d[0] ) ;
+- ALU_Operand[3]
+  ( PIN ALU_Operand[3] ) ;
+- ALU_Operand[2]
+  ( PIN ALU_Operand[2] ) ;
+- ALU_Function[4]
+  ( PIN ALU_Function[4] ) ;
+- ALU_Function[3]
+  ( PIN ALU_Function[3] ) ;
+- ALU_Function[1]
+  ( PIN ALU_Function[1] ) ;
+- ALU_Function[0]
+  ( PIN ALU_Function[0] ) ;
+- cin
+  ( PIN cin ) ;
+- p[0]
+  ( PIN p[0] ) ;
+- q0_in
+  ( PIN q0_in ) ;
+- ALU_Function[2]
+  ( PIN ALU_Function[2] ) ;
+- f[3]
+  ( PIN f[3] ) ;
+- ALU_Dest[1]
+  ( PIN ALU_Dest[1] ) ;
+- ALU_Dest[0]
+  ( PIN ALU_Dest[0] ) ;
+- f3_in
+  ( PIN f3_in ) ;
+- f0_in
+  ( PIN f0_in ) ;
+- ALU_Dest[2]
+  ( PIN ALU_Dest[2] ) ;
+- c[2]
+  ( PIN c[2] ) ;
+- ALU_Dest[5]
+  ( PIN ALU_Dest[5] ) ;
+- cp
+  ( PIN cp ) ;
+- select_a_hi[7]
+  ( PIN select_a_hi[7] ) ;
+- select_a_hi[8]
+  ( PIN select_a_hi[8] ) ;
+- select_b_hi[8]
+  ( PIN select_b_hi[8] ) ;
+- select_a_hi[9]
+  ( PIN select_a_hi[9] ) ;
+- select_b_hi[10]
+  ( PIN select_b_hi[10] ) ;
+- select_a_hi[10]
+  ( PIN select_a_hi[10] ) ;
+- select_b_hi[1]
+  ( PIN select_b_hi[1] ) ;
+- select_a_hi[1]
+  ( PIN select_a_hi[1] ) ;
+- select_b_hi[5]
+  ( PIN select_b_hi[5] ) ;
+- select_a_hi[3]
+  ( PIN select_a_hi[3] ) ;
+- select_a_hi[5]
+  ( PIN select_a_hi[5] ) ;
+- select_b_hi[7]
+  ( PIN select_b_hi[7] ) ;
+- select_b_hi[11]
+  ( PIN select_b_hi[11] ) ;
+- select_a_hi[11]
+  ( PIN select_a_hi[11] ) ;
+- select_b_hi[12]
+  ( PIN select_b_hi[12] ) ;
+- select_a_hi[12]
+  ( PIN select_a_hi[12] ) ;
+- select_b_hi[14]
+  ( PIN select_b_hi[14] ) ;
+- select_b_hi[3]
+  ( PIN select_b_hi[3] ) ;
+- select_b_hi[2]
+  ( PIN select_b_hi[2] ) ;
+- select_a_hi[13]
+  ( PIN select_a_hi[13] ) ;
+- select_b_hi[13]
+  ( PIN select_b_hi[13] ) ;
+- select_a_hi[6]
+  ( PIN select_a_hi[6] ) ;
+- select_b_hi[6]
+  ( PIN select_b_hi[6] ) ;
+- select_a_hi[4]
+  ( PIN select_a_hi[4] ) ;
+- select_b_hi[4]
+  ( PIN select_b_hi[4] ) ;
+- select_a_hi[2]
+  ( PIN select_a_hi[2] ) ;
+- select_a_hi[0]
+  ( PIN select_a_hi[0] ) ;
+- select_a_hi[14]
+  ( PIN select_a_hi[14] ) ;
+- select_b_hi[9]
+  ( PIN select_b_hi[9] ) ;
+- select_b_hi[0]
+  ( PIN select_b_hi[0] ) ;
+- select_a_hi[15]
+  ( PIN select_a_hi[15] ) ;
+- select_b_hi[15]
+  ( PIN select_b_hi[15] ) ;
+- f[0]
+  ( PIN f[0] ) ;
+- c[0]
+  ( PIN c[0] ) ;
+- y[1]
+  ( PIN y[1] ) ;
+- p[1]
+  ( PIN p[1] ) ;
+- f[1]
+  ( PIN f[1] ) ;
+- f[2]
+  ( PIN f[2] ) ;
+- c[1]
+  ( PIN c[1] ) ;
+- p[2]
+  ( PIN p[2] ) ;
+- y[2]
+  ( PIN y[2] ) ;
+- q3_out
+  ( PIN q3_out ) ;
+- q0_out
+  ( PIN q0_out ) ;
+- d[1]
+  ( PIN d[1] ) ;
+- d[2]
+  ( PIN d[2] ) ;
+- d[3]
+  ( PIN d[3] ) ;
+- c[3]
+  ( PIN c[3] ) ;
+- q3_in
+  ( PIN q3_in ) ;
+END NETS
+
+END DESIGN

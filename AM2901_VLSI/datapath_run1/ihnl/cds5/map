@@ -1,0 +1,8 @@
+( ( defbus
+( "Select" 1 0  "Select" 1 0  )
+ )
+( net
+( "Select<1>" "Select[1]" )
+( "Select<0>" "Select[0]" )
+ )
+ )

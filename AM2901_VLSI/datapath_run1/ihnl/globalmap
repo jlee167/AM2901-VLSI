@@ -1,0 +1,22 @@
+CADENCE IHNL11142
+$model
+ece425mp2/alu/schematic alu
+ece425mp1/xor2/schematic xor2
+ece425mp2/regbit/schematic regbit
+ece425mp2/mux_4to1/schematic mux_4to1
+ece425mp2/logic/schematic logic
+ece425mp2/Q_Register/schematic Q_Register
+ece425mp2/regfile/schematic regfile
+ece425mp2/latch/schematic latch
+ece425mp2/datapath/schematic datapath
+ece425mp2/mux_2to1/schematic mux_2to1
+ece425mp2/bitslice_mp2/schematic bitslice_mp2
+ece425mp2/add/schematic add
+ece425mp2/bitslice/schematic bitslice
+$endmodel
+$net
+gnd! cds_globals.gnd_
+vdd! cds_globals.vdd_
+$endnet
+$param
+$endparam
